@@ -15,7 +15,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260707c">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C_k3HqUtEw.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20260707d">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -25,14 +28,7 @@
     "description": "Formations IA sur mesure, individuelles ou en groupe, pour dirigeants, cadres et équipes : usages concrets de l'IA dans le métier, prompt engineering, automatisations, et mise en conformité avec l'article 4 du règlement européen sur l'IA.",
     "url": "https://fiducia-ia.com/formation-ia",
     "areaServed": ["Hérault", "Occitanie", "France"],
-    "provider": {
-      "@type": "ProfessionalService",
-      "name": "Fiducia Conseil IA",
-      "url": "https://fiducia-ia.com/",
-      "telephone": "+33615513604",
-      "email": "contact@fiducia-ia.com",
-      "address": { "@type": "PostalAddress", "addressLocality": "Montagnac", "postalCode": "34530", "addressCountry": "FR" }
-    }
+    "provider": { "@id": "https://fiducia-ia.com/#organization", "name": "Fiducia IA" }
   }
   </script>
   <script type="application/ld+json">
@@ -50,7 +46,7 @@
 
 <nav class="nav" aria-label="Navigation principale">
   <a class="nav__logo" href="/" aria-label="Fiducia IA — accueil">
-    <img src="assets/logo-fiducia-ia.png" alt="Fiducia IA" width="174" height="58">
+    <img src="assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="174" height="58">
   </a>
   <button class="nav__burger" aria-expanded="false" aria-label="Ouvrir le menu">
     <span></span><span></span><span></span>
@@ -130,7 +126,7 @@
         <div class="proof"><strong data-count="78" data-suffix=" %">0&nbsp;%</strong><span>des organisations utilisent l'IA dans au moins une fonction (McKinsey 2025)</span></div>
         <div class="proof"><strong data-count="58" data-suffix=" %">0&nbsp;%</strong><span>des dirigeants de PME-ETI y voient un enjeu de survie à 3-5 ans (Bpifrance)</span></div>
         <div class="proof"><strong data-count="26" data-suffix=" %">0&nbsp;%</strong><span>des TPE-PME françaises l'utilisent en 2025 — deux fois plus qu'en 2024 (France Num)</span></div>
-        <div class="proof"><strong data-count="26" data-suffix=" min/j">0</strong><span>gagnées en moyenne par 20&nbsp;000 agents publics britanniques, soit ≈ 13 jours par an</span></div>
+        <div class="proof"><strong data-count="26" data-suffix=" min/j">0</strong><span>gagnées en moyenne par 20&nbsp;000 agents publics britanniques, soit ≈ 13 jours par an (<a href="https://www.gov.uk/government/publications/microsoft-365-copilot-experiment-cross-government-findings-report" rel="noopener" target="_blank">rapport officiel</a>)</span></div>
       </div>
 
       <div class="donut-grid reveal">
@@ -138,19 +134,19 @@
           <div class="donut-ring"><div class="donut-val">0&nbsp;%</div></div>
           <h4>Développement logiciel</h4>
           <p>Tâche de code réalisée 55,8&nbsp;% plus vite avec un assistant IA (expérience contrôlée)</p>
-          <div class="donut-meta"><span class="badge badge--mesure">Mesuré</span><span class="src">Microsoft Research / GitHub</span></div>
+          <div class="donut-meta"><span class="badge badge--mesure">Mesuré</span><span class="src"><a href="https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/" rel="noopener" target="_blank">Microsoft Research / GitHub</a></span></div>
         </div>
         <div class="donut" data-value="25.1" data-decimals="1">
           <div class="donut-ring"><div class="donut-val">0&nbsp;%</div></div>
           <h4>Conseil &amp; travail intellectuel</h4>
           <p>25,1&nbsp;% plus rapide et +40&nbsp;% de qualité sur des tâches réelles (758 consultants)</p>
-          <div class="donut-meta"><span class="badge badge--mesure">Mesuré</span><span class="src">Harvard / BCG</span></div>
+          <div class="donut-meta"><span class="badge badge--mesure">Mesuré</span><span class="src"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321" rel="noopener" target="_blank">Harvard / BCG</a></span></div>
         </div>
         <div class="donut" data-value="15">
           <div class="donut-ring"><div class="donut-val">0&nbsp;%</div></div>
           <h4>Service client</h4>
           <p>+15&nbsp;% de productivité en moyenne — et +34&nbsp;% pour les moins expérimentés</p>
-          <div class="donut-meta"><span class="badge badge--mesure">Mesuré</span><span class="src">Étude QJE, Fortune 500</span></div>
+          <div class="donut-meta"><span class="badge badge--mesure">Mesuré</span><span class="src"><a href="https://www.nber.org/papers/w31161" rel="noopener" target="_blank">Étude QJE, Fortune 500</a></span></div>
         </div>
         <div class="donut" data-value="-40">
           <div class="donut-ring"><div class="donut-val">0&nbsp;%</div></div>
@@ -180,8 +176,8 @@
           <div class="faq__body"><p>Aucune. Nos formations s'adressent aux dirigeants, cadres et équipes métier — pas aux informaticiens. Tout se fait avec des outils grand public, dans un langage clair, sur vos cas concrets.</p></div>
         </details>
         <details>
-          <summary>La formation peut-elle être financée&nbsp;?</summary>
-          <div class="faq__body"><p>Selon votre statut, des financements existent via votre OPCO ou votre fonds d'assurance formation (AGEFICE, FIF-PL, FAFCEA…). Les modalités dépendent de votre situation : nous faisons le point lors de l'appel de cadrage. [À COMPLÉTER : statut de certification de l'organisme — Qualiopi ou non]</p></div>
+          <summary>La formation peut-elle être financée (OPCO, CPF)&nbsp;?</summary>
+          <div class="faq__body"><p>Non — Fiducia IA n'est pas un organisme certifié Qualiopi, nos formations ne sont donc pas éligibles aux financements OPCO ou CPF. C'est un choix assumé : zéro dossier administratif, des formats courts qui démarrent sous quelques jours, et des tarifs directs adaptés aux TPE/PME. Le calcul se fait sur le retour sur investissement : le temps gagné dès les premières semaines rembourse la formation bien plus vite qu'un dossier de financement ne serait accepté.</p></div>
         </details>
         <details>
           <summary>Formation sur site ou à distance&nbsp;?</summary>
@@ -216,7 +212,7 @@
     <div class="footer-card">
       <div class="footer__grid">
         <div class="footer__logo">
-          <img src="assets/logo-fiducia-ia.png" alt="Fiducia IA" width="165" height="55" loading="lazy">
+          <img src="assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="165" height="55" loading="lazy">
           <p style="font-size:0.92rem;max-width:34ch">Le partenaire IA des dirigeants et cadres — visibilité, formation, automatisation.</p>
           <div class="footer__contacts">
             <a href="tel:+33615513604" aria-label="Appeler Fiducia IA">
@@ -253,12 +249,13 @@
       </div>
     </div>
     <div class="footer__legal">
-      <span>© 2026 Fiducia Conseil IA — Tous droits réservés</span>
+      <span>© 2026 FIDUCIA CONSEILS — Fiducia IA</span>
+      <a href="/mentions-legales">Mentions légales</a>
       <a href="/privacy-policy">Politique de confidentialité</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=20260707c" defer></script>
+<script src="script.js?v=20260707d" defer></script>
 </body>
 </html>

@@ -15,7 +15,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260707c">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C_k3HqUtEw.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css?v=20260707d">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -25,14 +28,7 @@
     "description": "Audit des processus de travail puis mise en place d'agents IA et d'automatisations sur mesure : traitement des demandes clients, emails, devis, relances, standard téléphonique IA, chatbots.",
     "url": "https://fiducia-ia.com/agents-ia-entreprise",
     "areaServed": ["Hérault", "Occitanie", "France"],
-    "provider": {
-      "@type": "ProfessionalService",
-      "name": "Fiducia Conseil IA",
-      "url": "https://fiducia-ia.com/",
-      "telephone": "+33615513604",
-      "email": "contact@fiducia-ia.com",
-      "address": { "@type": "PostalAddress", "addressLocality": "Montagnac", "postalCode": "34530", "addressCountry": "FR" }
-    }
+    "provider": { "@id": "https://fiducia-ia.com/#organization", "name": "Fiducia IA" }
   }
   </script>
   <script type="application/ld+json">
@@ -50,7 +46,7 @@
 
 <nav class="nav" aria-label="Navigation principale">
   <a class="nav__logo" href="/" aria-label="Fiducia IA — accueil">
-    <img src="assets/logo-fiducia-ia.png" alt="Fiducia IA" width="174" height="58">
+    <img src="assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="174" height="58">
   </a>
   <button class="nav__burger" aria-expanded="false" aria-label="Ouvrir le menu">
     <span></span><span></span><span></span>
@@ -126,9 +122,9 @@
               <input type="range" id="sim-cost" min="20" max="80" step="5" value="35">
             </div>
             <div class="sim-results">
-              <div class="sim-res"><strong id="sim-res-h">—</strong><span>libérées par an</span></div>
-              <div class="sim-res"><strong id="sim-res-eur">—</strong><span>de coût réalloué par an</span></div>
-              <div class="sim-res"><strong id="sim-res-j">—</strong><span>de travail récupérés</span></div>
+              <div class="sim-res"><strong id="sim-res-h">≈ 1 320 h</strong><span>libérées par an</span></div>
+              <div class="sim-res"><strong id="sim-res-eur">≈ 46 200 €</strong><span>de coût réalloué par an</span></div>
+              <div class="sim-res"><strong id="sim-res-j">≈ 189 jours</strong><span>de travail récupérés</span></div>
             </div>
           </div>
           <div class="day-bars">
@@ -154,7 +150,7 @@
             </div>
           </div>
         </div>
-        <p class="gain-note">Hypothèse : l'agent absorbe 60&nbsp;% du temps répétitif — cohérent avec les déploiements publiés (chez Klarna, l'assistant IA traite les deux tiers des conversations). Base : 220 jours travaillés/an, journée de 8 h. Votre audit remplace ces hypothèses par vos chiffres réels.</p>
+        <p class="gain-note">Hypothèse : l'agent absorbe 60&nbsp;% du temps répétitif — cohérent avec les déploiements publiés (chez Klarna, l'assistant IA traite les deux tiers des conversations). Base : 220 jours travaillés/an, journée de 8 h. Votre audit remplace ces hypothèses par vos chiffres réels. Exemple type : pour une équipe de 5 collaborateurs qui perdent 2 h par jour en tâches répétitives à 35 € de l'heure, un agent IA libère environ 1 320 heures et 46 200 € par an, soit 189 jours de travail récupérés.</p>
       </div>
 
       <h2 class="reveal">Notre méthode : l'audit avant l'outil</h2>
@@ -165,7 +161,7 @@
       <div class="faq reveal">
         <details>
           <summary>Combien coûte un agent IA pour une PME&nbsp;?</summary>
-          <div class="faq__body"><p>Cela dépend du périmètre : une automatisation simple (tri d'emails, relances) ne coûte pas le prix d'un agent complet de relation client. L'audit chiffre d'abord le gain attendu (heures récupérées, frais évités), puis le devis se cale dessus — vous savez avant de signer si l'investissement est rentable et en combien de mois.</p></div>
+          <div class="faq__body"><p>Cela dépend du périmètre : une automatisation simple (tri d'emails, relances) ne coûte pas le prix d'un agent complet de relation client. L'audit chiffre d'abord le gain attendu (heures récupérées, frais évités), puis le devis se cale dessus — vous savez avant de signer si l'investissement est rentable et en combien de mois. Notre approche : un devis qui s'adapte à votre budget et à vos besoins — un chantier peut se concevoir petit à petit, en commençant par des solutions simples à tarif raisonnable. Le gain de temps, la baisse des frais fixes et les contacts générés amènent très vite au retour sur investissement, ce qui finance naturellement la suite.</p></div>
         </details>
         <details>
           <summary>Mes données restent-elles confidentielles&nbsp;?</summary>
@@ -204,7 +200,7 @@
     <div class="footer-card">
       <div class="footer__grid">
         <div class="footer__logo">
-          <img src="assets/logo-fiducia-ia.png" alt="Fiducia IA" width="165" height="55" loading="lazy">
+          <img src="assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="165" height="55" loading="lazy">
           <p style="font-size:0.92rem;max-width:34ch">Le partenaire IA des dirigeants et cadres — visibilité, formation, automatisation.</p>
           <div class="footer__contacts">
             <a href="tel:+33615513604" aria-label="Appeler Fiducia IA">
@@ -241,12 +237,13 @@
       </div>
     </div>
     <div class="footer__legal">
-      <span>© 2026 Fiducia Conseil IA — Tous droits réservés</span>
+      <span>© 2026 FIDUCIA CONSEILS — Fiducia IA</span>
+      <a href="/mentions-legales">Mentions légales</a>
       <a href="/privacy-policy">Politique de confidentialité</a>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=20260707c" defer></script>
+<script src="script.js?v=20260707d" defer></script>
 </body>
 </html>
