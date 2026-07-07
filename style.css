@@ -764,7 +764,7 @@ h2.reveal.is-visible::after, .reveal.is-visible h2::after { width: 68px; }
   .offer--featured { grid-column: span 2; flex-direction: column; align-items: flex-start; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .nav__links {
     position: absolute; top: calc(100% + 10px); left: 0; right: 0;
     flex-direction: column; align-items: flex-start; gap: 4px;

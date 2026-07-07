@@ -15,7 +15,6 @@ RewriteRule ^formation-chatgpt-decouverte-ia/?$ /formation-ia [R=301,L]
 RewriteRule ^creation-de-sites-internet-applications-saas-services-digitalisation-pme/?$ /creation-site-internet [R=301,L]
 RewriteRule ^cas-concrets-ia-automatisation/?$ /agents-ia-entreprise [R=301,L]
 RewriteRule ^blog-fiducia-ia/?$ / [R=301,L]
-RewriteRule ^contact/?$ / [R=301,L]
 RewriteRule ^rapport-gratuit-ia/?$ / [R=301,L]
 
 # --- Anciens articles de blog → pilier le plus proche ---
