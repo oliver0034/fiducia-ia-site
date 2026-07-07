@@ -221,6 +221,19 @@ img { max-width: 100%; height: auto; }
 .breadcrumb a:hover { color: var(--cyan); }
 .breadcrumb li + li::before { content: "/"; margin-right: 8px; opacity: 0.5; }
 
+/* ---------- Visuel de page ---------- */
+.page-visual { margin: 8px 0 40px; }
+.page-visual img {
+  display: block; width: 100%; height: auto;
+  border-radius: 20px;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 18px 60px rgba(46, 143, 255, 0.18);
+}
+.page-visual figcaption {
+  margin-top: 12px; text-align: center;
+  font-size: 0.85rem; color: var(--text-muted); opacity: 0.85;
+}
+
 /* ---------- Bloc contenu éditorial ---------- */
 .prose h2 { margin: 56px 0 18px; }
 .prose h3 { margin: 32px 0 12px; }
