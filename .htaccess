@@ -1,0 +1,62 @@
+# Fiducia IA — règles Apache (Hostinger)
+RewriteEngine On
+
+# --- HTTPS obligatoire ---
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# --- Redirections 301 : anciennes URLs du site (capital SEO ~40 URLs indexées) ---
+RewriteRule ^nos-specialites-automatisation-ia/?$ /agents-ia-entreprise [R=301,L]
+RewriteRule ^automatisations/?$ /agents-ia-entreprise [R=301,L]
+RewriteRule ^assistants-virtuels-pme/?$ /agents-ia-entreprise [R=301,L]
+RewriteRule ^coaching-personnalise-ia/?$ /formation-ia [R=301,L]
+RewriteRule ^coaching-ia/?$ /formation-ia [R=301,L]
+RewriteRule ^formation-chatgpt-decouverte-ia/?$ /formation-ia [R=301,L]
+RewriteRule ^creation-de-sites-internet-applications-saas-services-digitalisation-pme/?$ /creation-site-internet [R=301,L]
+RewriteRule ^cas-concrets-ia-automatisation/?$ /agents-ia-entreprise [R=301,L]
+RewriteRule ^blog-fiducia-ia/?$ / [R=301,L]
+RewriteRule ^contact/?$ / [R=301,L]
+RewriteRule ^rapport-gratuit-ia/?$ / [R=301,L]
+
+# --- Anciens articles de blog → pilier le plus proche ---
+RewriteRule ^les-avis-ont-ils-vraiment-un-impact-sur-le-seo/?$ /referencement-seo-geo [R=301,L]
+RewriteRule ^chatgpt-search-openai-reinvente-la-recherche-en-ligne-avec-une-ia-conversationnelle/?$ /referencement-seo-geo [R=301,L]
+RewriteRule ^super-agents-ia-la-revolution-qui-va-redefinir-lavenir-de-lhumanite/?$ /agents-ia-entreprise [R=301,L]
+RewriteRule ^linnovation-au-secours-des-entreprises-et-des-collaborateurs-boostez-votre-productivite-avec-lia-intelligente-/?$ /agents-ia-entreprise [R=301,L]
+RewriteRule ^cree-ta-base-de-donnees-client-automatisee-en-moins-dune-heure-sans-coder-/?$ /agents-ia-entreprise [R=301,L]
+RewriteRule ^chatgpt-tasks-la-revolution-de-lautomatisation-pour-transformer-votre-quotidien/?$ /agents-ia-entreprise [R=301,L]
+RewriteRule ^lintegration-de-lia-dans-notre-quotidien-pourquoi-agir-maintenant/?$ /agents-ia-entreprise [R=301,L]
+RewriteRule ^faire-face-aux-defis-une-solution-pour-les-entreprises-confrontees-a-la-complexite-economique/?$ /agents-ia-entreprise [R=301,L]
+RewriteRule ^lia-redefinit-le-marche-du-travail-decouvrez-les-chiffres-cles-de-letude-danthropic/?$ /formation-ia [R=301,L]
+RewriteRule ^demystifier-lia-transformez-votre-entreprise-avec-succes/?$ /formation-ia [R=301,L]
+RewriteRule ^etes-vous-pret-a-etre-remplace-par-ceux-qui-osent-lia-votre-meilleur-allie-ou-votre-pire-ennemi-/?$ /formation-ia [R=301,L]
+RewriteRule ^gpt-4o-et-gpt-4o-with-canvas-la-derniere-evolution-de-chatgpt/?$ /formation-ia [R=301,L]
+RewriteRule ^lintelligence-artificielle-dejouez-les-idees-recues-et-transformez-la-en-votre-allie-n1/?$ /formation-ia [R=301,L]
+RewriteRule ^-lintelligence-artificielle-une-revolution-en-marche/?$ /formation-ia [R=301,L]
+RewriteRule ^sommet-de-lia-a-paris-une-prise-de-conscience-pour-les-entreprises-en-2025/?$ /formation-ia [R=301,L]
+RewriteRule ^revolutionnez-votre-recherche-demploi-l-ia-votre-meilleur-allie/?$ /formation-ia [R=301,L]
+RewriteRule ^ia-la-cle-pour-transformer-votre-avenir-en-opportunites-des-2025/?$ /formation-ia [R=301,L]
+RewriteRule ^lintelligence-artificielle-bouleverse-nos-metiers-etes-vous-pret-a-vous-adapter-/?$ /formation-ia [R=301,L]
+RewriteRule ^mes-predictions-pour-2025-plongee-dans-le-futur-de-lia/?$ / [R=301,L]
+
+# --- Pages fantômes du template e-commerce → 410 Gone (à désindexer) ---
+RewriteRule ^(classic-cap-hpeszv|face-serum-gxrcld|handmade-vase-slowpy|hand-soap-giguos|set-of-plates-cxlzwx|sunglasses-iubjnq|wooden-chair-mopukh|wool-sweater-lortoo)/?$ - [G,L]
+
+# --- URLs propres : /page.html → /page (301), puis /page → page.html (interne) ---
+RewriteCond %{THE_REQUEST} \s/([^.?\s]+)\.html[\s?]
+RewriteRule ^ /%1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# --- Performance : compression + cache ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
