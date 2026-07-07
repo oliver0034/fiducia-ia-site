@@ -279,7 +279,13 @@
     var setSeg = function (id, hours, label) {
       var el = document.getElementById(id);
       el.style.width = (hours / DAY_HOURS) * 100 + "%";
-      el.textContent = hours >= 1.2 ? label + " " + hours.toLocaleString("fr-FR", { maximumFractionDigits: 1 }) + " h" : "";
+      /* Libellé adapté à la largeur réelle du segment (mobile : version courte ou rien) */
+      var track = el.parentElement;
+      var px = (track.offsetWidth || 600) * (hours / DAY_HOURS);
+      var heures = hours.toLocaleString("fr-FR", { maximumFractionDigits: 1 }) + " h";
+      if (px >= 130) el.textContent = label + " " + heures;
+      else if (px >= 52) el.textContent = heures;
+      else el.textContent = "";
     };
 
     /* Remplissage lumineux de la piste jusqu'au curseur */
@@ -322,6 +328,7 @@
       });
     });
     updateSim();
+    window.addEventListener("resize", updateSim);
   }
 
   /* ----- Graphe interactif des heures gagnées (formation / agents IA) ----- */

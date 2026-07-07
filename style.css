@@ -613,7 +613,17 @@ img { max-width: 100%; height: auto; }
 .sim-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
 @media (max-width: 900px) {
   .sim-grid { grid-template-columns: 1fr; }
-  .sim-results { grid-template-columns: 1fr 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  /* Cartes de résultats empilées : le chiffre et son libellé sur une ligne lisible */
+  .sim-results { grid-template-columns: 1fr; gap: 10px; }
+  .sim-res {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; text-align: left; padding: 14px 16px;
+  }
+  .sim-res strong { font-size: 1.45rem; white-space: nowrap; }
+  .sim-res span { text-align: right; }
+  .day-seg { font-size: 0.68rem; }
 }
 
 /* ---------- Témoignage ---------- */
