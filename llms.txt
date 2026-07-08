@@ -6,10 +6,21 @@ Contact : contact@fiducia-ia.com — 06 15 51 36 04 — audit de 30 minutes offe
 
 ## Pages
 
-- [Accueil](https://fiducia-ia.com/) : les 5 expertises et la méthode (audit → solution sur mesure → accompagnement continu)
-- [Référencement SEO & GEO](https://fiducia-ia.com/referencement-seo-geo) : être trouvé sur Google et cité par les moteurs de réponse IA — offre dimensionnée TPE/PME
-- [Création de sites internet](https://fiducia-ia.com/creation-site-internet) : sites modernes, rapides, optimisés SEO/GEO dès la mise en ligne
-- [Refonte de sites internet](https://fiducia-ia.com/refonte-site-internet) : modernisation aux normes de la recherche IA sans perte du référencement acquis (plan de redirections 301)
+- [Accueil](https://fiducia-ia.com/) : les expertises et la méthode (audit → solution sur mesure → accompagnement continu)
+
+### Silo Référencement — https://fiducia-ia.com/referencement-seo-geo/
+- [Référencement SEO, GEO & GMB](https://fiducia-ia.com/referencement-seo-geo/) : vue d'ensemble des trois leviers de visibilité
+- [Référencement Google (SEO)](https://fiducia-ia.com/referencement-seo-geo/referencement-google-seo) : audit technique, contenu, netlinking pour TPE/PME
+- [GEO — visibilité IA](https://fiducia-ia.com/referencement-seo-geo/referencement-geo-ia) : être cité par ChatGPT, Perplexity et les AI Overviews
+- [Google Business Profile & SEO local](https://fiducia-ia.com/referencement-seo-geo/google-business-profile-gmb) : fiche établissement, avis clients, visibilité locale
+
+### Silo Création & Refonte — https://fiducia-ia.com/creation-et-refonte-site/
+- [Création & Refonte de sites](https://fiducia-ia.com/creation-et-refonte-site/) : vue d'ensemble des trois offres
+- [Création de sites internet](https://fiducia-ia.com/creation-et-refonte-site/creation-site-internet) : sites modernes, rapides, optimisés SEO/GEO dès la mise en ligne
+- [Refonte de sites internet](https://fiducia-ia.com/creation-et-refonte-site/refonte-site-internet) : modernisation aux normes de la recherche IA sans perte du référencement acquis (plan de redirections 301)
+- [Création d'applications PME/TPE](https://fiducia-ia.com/creation-et-refonte-site/creation-application-pme) : outils métier, portails clients, automatisations en low-code + IA
+
+### Intelligence artificielle
 - [Formation IA en entreprise](https://fiducia-ia.com/formation-ia) : individuelle ou en groupe, ancrée dans le métier, conforme à l'article 4 du règlement européen sur l'IA (en vigueur depuis le 2 février 2025)
 - [Agents IA & automatisations](https://fiducia-ia.com/agents-ia-entreprise) : audit des process puis déploiement d'agents sur mesure — relation client, administratif, commercial, pilotage
 
