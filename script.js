@@ -14,6 +14,41 @@
     });
   }
 
+  /* ----- Menus déroulants (silos) ----- */
+  var dropdowns = document.querySelectorAll(".nav__item--dropdown");
+  var closeAllDropdowns = function () {
+    dropdowns.forEach(function (item) {
+      item.classList.remove("is-open");
+      var t = item.querySelector(".nav__dropdown-toggle");
+      if (t) t.setAttribute("aria-expanded", "false");
+    });
+  };
+  dropdowns.forEach(function (item) {
+    var toggle = item.querySelector(".nav__dropdown-toggle");
+    if (!toggle) return;
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      var wasOpen = item.classList.contains("is-open");
+      closeAllDropdowns();
+      if (!wasOpen) {
+        item.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+  document.addEventListener("click", function (e) {
+    dropdowns.forEach(function (item) {
+      if (!item.contains(e.target)) {
+        item.classList.remove("is-open");
+        var t = item.querySelector(".nav__dropdown-toggle");
+        if (t) t.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeAllDropdowns();
+  });
+
   /* ----- H1 : apparition mot à mot puis dégradé animé continu ----- */
   var h1 = document.querySelector(".hero h1, .page-hero h1");
   if (h1 && reducedMotion) {

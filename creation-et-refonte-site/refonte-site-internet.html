@@ -18,7 +18,7 @@
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C_k3HqUtEw.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../style.css?v=20260708a">
+  <link rel="stylesheet" href="../style.css?v=20260708b">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,9 +53,34 @@
     <span></span><span></span><span></span>
   </button>
   <ul class="nav__links">
-    <li><a href="/referencement-seo-geo/">SEO &amp; GEO</a></li>
-    <li><a href="/creation-et-refonte-site/creation-site-internet">Création de sites</a></li>
-    <li><a href="/creation-et-refonte-site/refonte-site-internet" aria-current="page">Refonte</a></li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/referencement-seo-geo/">SEO &amp; GEO</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-referencement" aria-label="Sous-menu Référencement">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-referencement">
+      <li><a href="/referencement-seo-geo/">Vue d'ensemble</a></li>
+      <li><a href="/referencement-seo-geo/referencement-google-seo">Référencement Google (SEO)</a></li>
+      <li><a href="/referencement-seo-geo/referencement-geo-ia">GEO — visibilité IA</a></li>
+      <li><a href="/referencement-seo-geo/google-business-profile-gmb">Google Business Profile</a></li>
+      </ul>
+    </li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/creation-et-refonte-site/">Création &amp; Refonte</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-creation" aria-label="Sous-menu Création & Refonte">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-creation">
+      <li><a href="/creation-et-refonte-site/">Vue d'ensemble</a></li>
+      <li><a href="/creation-et-refonte-site/creation-site-internet">Création de site internet</a></li>
+      <li><a href="/creation-et-refonte-site/refonte-site-internet" aria-current="page">Refonte de site internet</a></li>
+      <li><a href="/creation-et-refonte-site/creation-application-pme">Création d'applications PME</a></li>
+      </ul>
+    </li>
     <li><a href="/formation-ia">Formation IA</a></li>
     <li><a href="/agents-ia-entreprise">Agents IA</a></li>
     <li><a href="/a-propos">À propos</a></li>
@@ -194,6 +219,6 @@
   </div>
 </footer>
 
-<script src="../script.js?v=20260708a" defer></script>
+<script src="../script.js?v=20260708b" defer></script>
 </body>
 </html>
