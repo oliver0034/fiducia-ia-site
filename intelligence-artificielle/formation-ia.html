@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Formation IA dirigeants &amp; équipes (AI Act) | Fiducia IA</title>
   <meta name="description" content="Formation IA pour dirigeants, cadres et équipes, en individuel ou en groupe : usages concrets métier et conformité AI Act (art. 4). Audit offert.">
-  <link rel="canonical" href="https://fiducia-ia.com/formation-ia">
+  <link rel="canonical" href="https://fiducia-ia.com/intelligence-artificielle/formation-ia">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Formation IA dirigeants &amp; équipes (AI Act) | Fiducia IA">
   <meta property="og:description" content="Formation IA individuelle ou en groupe : usages concrets dans votre métier, et conformité à l'obligation de formation de l'AI Act.">
-  <meta property="og:url" content="https://fiducia-ia.com/formation-ia">
+  <meta property="og:url" content="https://fiducia-ia.com/intelligence-artificielle/formation-ia">
   <meta property="og:image" content="https://fiducia-ia.com/assets/logo-fiducia-ia.png">
   <meta property="og:locale" content="fr_FR">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C_k3HqUtEw.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20260708b">
+  <link rel="stylesheet" href="../style.css?v=20260708b">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,7 +26,7 @@
     "name": "Formation IA pour dirigeants et équipes",
     "serviceType": "Formation à l'intelligence artificielle en entreprise",
     "description": "Formations IA sur mesure, individuelles ou en groupe, pour dirigeants, cadres et équipes : usages concrets de l'IA dans le métier, prompt engineering, automatisations, et mise en conformité avec l'article 4 du règlement européen sur l'IA.",
-    "url": "https://fiducia-ia.com/formation-ia",
+    "url": "https://fiducia-ia.com/intelligence-artificielle/formation-ia",
     "areaServed": ["Hérault", "Occitanie", "France"],
     "provider": { "@id": "https://fiducia-ia.com/#organization", "name": "Fiducia IA" }
   }
@@ -37,7 +37,8 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://fiducia-ia.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Formation IA", "item": "https://fiducia-ia.com/formation-ia" }
+      { "@type": "ListItem", "position": 2, "name": "Intelligence artificielle", "item": "https://fiducia-ia.com/intelligence-artificielle/" },
+      { "@type": "ListItem", "position": 3, "name": "Formation IA", "item": "https://fiducia-ia.com/intelligence-artificielle/formation-ia" }
     ]
   }
   </script>
@@ -46,7 +47,7 @@
 
 <nav class="nav" aria-label="Navigation principale">
   <a class="nav__logo" href="/" aria-label="Fiducia IA — accueil">
-    <img src="assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="174" height="58">
+    <img src="../assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="174" height="58">
   </a>
   <button class="nav__burger" aria-expanded="false" aria-label="Ouvrir le menu">
     <span></span><span></span><span></span>
@@ -80,8 +81,19 @@
       <li><a href="/creation-et-refonte-site/creation-application-pme">Création d'applications PME</a></li>
       </ul>
     </li>
-    <li><a href="/formation-ia" aria-current="page">Formation IA</a></li>
-    <li><a href="/agents-ia-entreprise">Agents IA</a></li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/intelligence-artificielle/">Intelligence artificielle</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-ia" aria-label="Sous-menu Intelligence artificielle">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-ia">
+      <li><a href="/intelligence-artificielle/">Vue d'ensemble</a></li>
+      <li><a href="/intelligence-artificielle/formation-ia" aria-current="page">Formation IA</a></li>
+      <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA & automatisations</a></li>
+      </ul>
+    </li>
     <li><a href="/a-propos">À propos</a></li>
     <li><a href="/contact">Contact</a></li>
     <li><a class="btn btn--primary" href="https://calendly.com/fiducia-ia/30min" style="padding:10px 20px">Audit 30 min</a></li>
@@ -93,6 +105,7 @@
   <div class="container">
     <ol class="breadcrumb">
       <li><a href="/">Accueil</a></li>
+      <li><a href="/intelligence-artificielle/">Intelligence artificielle</a></li>
       <li>Formation IA</li>
     </ol>
     <h1>Formation IA en entreprise : <span class="grad-text">de l'obligation légale à l'avantage compétitif</span></h1>
@@ -109,7 +122,7 @@
     <div class="container prose">
 
       <figure class="page-visual reveal">
-        <img src="assets/formation-ia-visuel.webp" alt="Formation IA en entreprise : transmission des compétences en intelligence artificielle aux dirigeants et équipes" title="Formation IA pour dirigeants, cadres et équipes" width="1400" height="788" loading="lazy">
+        <img src="../assets/formation-ia-visuel.webp" alt="Formation IA en entreprise : transmission des compétences en intelligence artificielle aux dirigeants et équipes" title="Formation IA pour dirigeants, cadres et équipes" width="1400" height="788" loading="lazy">
       </figure>
       <h2 class="reveal">La formation IA est-elle obligatoire&nbsp;?</h2>
       <p class="reveal">Oui, dans de nombreux cas. Depuis le <strong>2 février 2025</strong>, l'article 4 du règlement européen sur l'intelligence artificielle (UE 2024/1689) impose aux entreprises qui utilisent ou déploient des systèmes d'IA de <strong>garantir un niveau suffisant de « maîtrise de l'IA »</strong> aux collaborateurs concernés.</p>
@@ -122,7 +135,7 @@
         <li><strong>Coaching individuel dirigeant / cadre</strong> — en tête-à-tête, sur vos dossiers réels : gagner du temps sur les emails, les synthèses, la préparation de décisions, le pilotage. Discret et immédiatement actionnable.</li>
         <li><strong>Formation d'équipe ou de service</strong> — en groupe, sur site ou en visio : les fondamentaux de l'IA générative, le prompt engineering appliqué à votre métier, les limites et les règles d'usage (confidentialité, vérification), et des cas pratiques sur vos processus.</li>
       </ul>
-      <p class="reveal">Chaque formation se conclut par une <strong>feuille de route personnalisée</strong> : les 3 à 5 usages IA les plus rentables à déployer chez vous en priorité. Quand un usage mérite d'être industrialisé, il devient un projet d'<a href="/agents-ia-entreprise">agent IA ou d'automatisation sur mesure</a>.</p>
+      <p class="reveal">Chaque formation se conclut par une <strong>feuille de route personnalisée</strong> : les 3 à 5 usages IA les plus rentables à déployer chez vous en priorité. Quand un usage mérite d'être industrialisé, il devient un projet d'<a href="/intelligence-artificielle/agents-ia-entreprise">agent IA ou d'automatisation sur mesure</a>.</p>
 
       <h2 class="reveal">Ce que vos équipes sauront faire après</h2>
       <p class="reveal">L'objectif n'est pas de « comprendre l'IA » : c'est de produire plus, avec moins d'effort, dès la semaine suivante.</p>
@@ -237,7 +250,7 @@
     <div class="footer-card">
       <div class="footer__grid">
         <div class="footer__logo">
-          <img src="assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="165" height="55" loading="lazy">
+          <img src="../assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="165" height="55" loading="lazy">
           <p style="font-size:0.92rem;max-width:34ch">Le partenaire IA des dirigeants et cadres — visibilité, formation, automatisation.</p>
           <div class="footer__contacts">
             <a href="tel:+33615513604" aria-label="Appeler Fiducia IA">
@@ -260,8 +273,8 @@
             <li><a href="/creation-et-refonte-site/creation-site-internet">Création de site internet</a></li>
             <li><a href="/creation-et-refonte-site/refonte-site-internet">Refonte de site internet</a></li>
             <li><a href="/creation-et-refonte-site/creation-application-pme">Création d'applications PME</a></li>
-            <li><a href="/formation-ia">Formation IA</a></li>
-            <li><a href="/agents-ia-entreprise">Agents IA &amp; automatisations</a></li>
+            <li><a href="/intelligence-artificielle/formation-ia">Formation IA</a></li>
+            <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA &amp; automatisations</a></li>
           </ul>
         </div>
         <div>
@@ -284,6 +297,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20260708b" defer></script>
+<script src="../script.js?v=20260708b" defer></script>
 </body>
 </html>

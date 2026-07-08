@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Agents IA &amp; automatisation pour entreprise | Fiducia IA</title>
   <meta name="description" content="Agents IA et automatisations sur mesure pour PME : moins de tâches répétitives, moins de frais fixes, plus de temps. Audit de 30 min offert.">
-  <link rel="canonical" href="https://fiducia-ia.com/agents-ia-entreprise">
+  <link rel="canonical" href="https://fiducia-ia.com/intelligence-artificielle/agents-ia-entreprise">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Agents IA &amp; automatisation pour entreprise | Fiducia IA">
   <meta property="og:description" content="Audit de vos process, puis agents IA et automatisations sur mesure : moins de tâches répétitives, moins de frais fixes, plus de temps.">
-  <meta property="og:url" content="https://fiducia-ia.com/agents-ia-entreprise">
+  <meta property="og:url" content="https://fiducia-ia.com/intelligence-artificielle/agents-ia-entreprise">
   <meta property="og:image" content="https://fiducia-ia.com/assets/logo-fiducia-ia.png">
   <meta property="og:locale" content="fr_FR">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C_k3HqUtEw.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20260708b">
+  <link rel="stylesheet" href="../style.css?v=20260708b">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,7 +26,7 @@
     "name": "Agents IA et automatisations sur mesure",
     "serviceType": "Déploiement d'agents IA et automatisation de processus en entreprise",
     "description": "Audit des processus de travail puis mise en place d'agents IA et d'automatisations sur mesure : traitement des demandes clients, emails, devis, relances, standard téléphonique IA, chatbots.",
-    "url": "https://fiducia-ia.com/agents-ia-entreprise",
+    "url": "https://fiducia-ia.com/intelligence-artificielle/agents-ia-entreprise",
     "areaServed": ["Hérault", "Occitanie", "France"],
     "provider": { "@id": "https://fiducia-ia.com/#organization", "name": "Fiducia IA" }
   }
@@ -37,7 +37,8 @@
     "@type": "BreadcrumbList",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://fiducia-ia.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Agents IA & automatisations", "item": "https://fiducia-ia.com/agents-ia-entreprise" }
+      { "@type": "ListItem", "position": 2, "name": "Intelligence artificielle", "item": "https://fiducia-ia.com/intelligence-artificielle/" },
+      { "@type": "ListItem", "position": 3, "name": "Agents IA & automatisations", "item": "https://fiducia-ia.com/intelligence-artificielle/agents-ia-entreprise" }
     ]
   }
   </script>
@@ -46,7 +47,7 @@
 
 <nav class="nav" aria-label="Navigation principale">
   <a class="nav__logo" href="/" aria-label="Fiducia IA — accueil">
-    <img src="assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="174" height="58">
+    <img src="../assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="174" height="58">
   </a>
   <button class="nav__burger" aria-expanded="false" aria-label="Ouvrir le menu">
     <span></span><span></span><span></span>
@@ -80,8 +81,19 @@
       <li><a href="/creation-et-refonte-site/creation-application-pme">Création d'applications PME</a></li>
       </ul>
     </li>
-    <li><a href="/formation-ia">Formation IA</a></li>
-    <li><a href="/agents-ia-entreprise" aria-current="page">Agents IA</a></li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/intelligence-artificielle/">Intelligence artificielle</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-ia" aria-label="Sous-menu Intelligence artificielle">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-ia">
+      <li><a href="/intelligence-artificielle/">Vue d'ensemble</a></li>
+      <li><a href="/intelligence-artificielle/formation-ia">Formation IA</a></li>
+      <li><a href="/intelligence-artificielle/agents-ia-entreprise" aria-current="page">Agents IA & automatisations</a></li>
+      </ul>
+    </li>
     <li><a href="/a-propos">À propos</a></li>
     <li><a href="/contact">Contact</a></li>
     <li><a class="btn btn--primary" href="https://calendly.com/fiducia-ia/30min" style="padding:10px 20px">Audit 30 min</a></li>
@@ -93,6 +105,7 @@
   <div class="container">
     <ol class="breadcrumb">
       <li><a href="/">Accueil</a></li>
+      <li><a href="/intelligence-artificielle/">Intelligence artificielle</a></li>
       <li>Agents IA &amp; automatisations</li>
     </ol>
     <h1>Agent IA &amp; automatisation d'entreprise : <span class="grad-text">baissez vos frais fixes, libérez du temps</span></h1>
@@ -109,7 +122,7 @@
     <div class="container prose">
 
       <figure class="page-visual reveal">
-        <img src="assets/agents-ia-entreprise-visuel.webp" alt="Agents IA et automatisation en entreprise : des assistants intelligents traitent emails, documents et demandes clients automatiquement" title="Agents IA &amp; automatisations sur mesure pour PME" width="1400" height="788" loading="lazy">
+        <img src="../assets/agents-ia-entreprise-visuel.webp" alt="Agents IA et automatisation en entreprise : des assistants intelligents traitent emails, documents et demandes clients automatiquement" title="Agents IA &amp; automatisations sur mesure pour PME" width="1400" height="788" loading="lazy">
       </figure>
       <h2 class="reveal">Qu'est-ce qu'un agent IA&nbsp;?</h2>
       <p class="reveal">Un agent IA est un assistant logiciel qui <strong>exécute des tâches de bout en bout</strong> à votre place : il lit, comprend, décide et agit selon les règles que vous fixez. Contrairement à un simple chatbot qui répond à des questions, un agent traite une demande client, rédige et envoie le devis, met à jour votre CRM et programme la relance — sans intervention humaine sur les cas standards.</p>
@@ -126,7 +139,7 @@
 
       <h2 class="reveal">Des équipes saturées : le vrai coût du statu quo</h2>
       <p class="reveal">Le premier coût de l'inaction n'apparaît sur aucune facture : c'est celui des équipes saturées. Des collaborateurs qui passent leurs matinées à répondre aux emails, des demandes clients qui attendent 48 heures faute de temps, des relances oubliées, une charge mentale qui déborde sur les soirées — et au bout, des clients qui partent pour un concurrent simplement plus réactif. Ce n'est pas un problème de compétence : c'est un problème de temps. Et c'est précisément le problème que les agents IA résolvent.</p>
-      <p class="reveal">Un agent IA ne remplace pas vos équipes : il absorbe la couche de travail répétitif qui les empêche de faire leur vrai métier. La réponse part dans la minute, la relance tombe au bon moment, le dossier est préparé avant la réunion — sans heure supplémentaire. Les études le mesurent : +15&nbsp;% de productivité en service client dans un Fortune 500 (et +34&nbsp;% chez les moins expérimentés), 26 minutes gagnées par jour en moyenne chez 20&nbsp;000 agents publics britanniques. Le détail chiffré, secteur par secteur, est sur notre page <a href="/formation-ia">formation IA</a>.</p>
+      <p class="reveal">Un agent IA ne remplace pas vos équipes : il absorbe la couche de travail répétitif qui les empêche de faire leur vrai métier. La réponse part dans la minute, la relance tombe au bon moment, le dossier est préparé avant la réunion — sans heure supplémentaire. Les études le mesurent : +15&nbsp;% de productivité en service client dans un Fortune 500 (et +34&nbsp;% chez les moins expérimentés), 26 minutes gagnées par jour en moyenne chez 20&nbsp;000 agents publics britanniques. Le détail chiffré, secteur par secteur, est sur notre page <a href="/intelligence-artificielle/formation-ia">formation IA</a>.</p>
 
       <h2 class="reveal">Simulez ce qu'un agent IA libère dans votre entreprise</h2>
       <p class="reveal">Le calcul est simple : chaque heure répétitive absorbée par un agent IA est une heure rendue au cœur de métier — ou retirée des frais fixes. Réglez les trois curseurs sur votre situation et regardez ce que ça représente sur une année :</p>
@@ -179,8 +192,8 @@
       </div>
 
       <h2 class="reveal">Notre méthode : l'audit avant l'outil</h2>
-      <p class="reveal">Le bon outil dépend de vos process réels — c'est pourquoi nous commençons toujours par un audit, jamais par un catalogue. Nous cartographions la journée type d'un service, d'un cadre ou d'un dirigeant, nous chiffrons le temps passé sur chaque tâche, puis nous déployons en priorité les automatisations au meilleur retour sur investissement. Et parce que l'IA évolue chaque mois, nous restons proches de nos clients pour intégrer les nouveautés qui comptent — c'est aussi l'esprit de nos <a href="/formation-ia">formations IA</a>, qui rendent vos équipes autonomes sur les outils déployés.</p>
-      <p class="reveal">Un agent IA est d'autant plus efficace qu'il s'appuie sur un site bien construit : un chatbot ou une prise de rendez-vous automatique s'intègre naturellement lors d'une <a href="/creation-et-refonte-site/creation-site-internet">création</a> ou d'une <a href="/creation-et-refonte-site/refonte-site-internet">refonte de site</a>.</p>
+      <p class="reveal">Le bon outil dépend de vos process réels — c'est pourquoi nous commençons toujours par un audit, jamais par un catalogue. Nous cartographions la journée type d'un service, d'un cadre ou d'un dirigeant, nous chiffrons le temps passé sur chaque tâche, puis nous déployons en priorité les automatisations au meilleur retour sur investissement. Et parce que l'IA évolue chaque mois, nous restons proches de nos clients pour intégrer les nouveautés qui comptent — c'est aussi l'esprit de nos <a href="/intelligence-artificielle/formation-ia">formations IA</a>, qui rendent vos équipes autonomes sur les outils déployés.</p>
+      <p class="reveal">Un agent IA est d'autant plus efficace qu'il s'appuie sur un site bien construit : un chatbot ou une prise de rendez-vous automatique s'intègre naturellement lors d'une <a href="/intelligence-artificielle/creation-et-refonte-site/creation-site-internet">création</a> ou d'une <a href="/intelligence-artificielle/creation-et-refonte-site/refonte-site-internet">refonte de site</a>.</p>
 
       <h2 class="reveal">Questions fréquentes</h2>
       <div class="faq reveal">
@@ -225,7 +238,7 @@
     <div class="footer-card">
       <div class="footer__grid">
         <div class="footer__logo">
-          <img src="assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="165" height="55" loading="lazy">
+          <img src="../assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="165" height="55" loading="lazy">
           <p style="font-size:0.92rem;max-width:34ch">Le partenaire IA des dirigeants et cadres — visibilité, formation, automatisation.</p>
           <div class="footer__contacts">
             <a href="tel:+33615513604" aria-label="Appeler Fiducia IA">
@@ -248,8 +261,8 @@
             <li><a href="/creation-et-refonte-site/creation-site-internet">Création de site internet</a></li>
             <li><a href="/creation-et-refonte-site/refonte-site-internet">Refonte de site internet</a></li>
             <li><a href="/creation-et-refonte-site/creation-application-pme">Création d'applications PME</a></li>
-            <li><a href="/formation-ia">Formation IA</a></li>
-            <li><a href="/agents-ia-entreprise">Agents IA &amp; automatisations</a></li>
+            <li><a href="/intelligence-artificielle/formation-ia">Formation IA</a></li>
+            <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA &amp; automatisations</a></li>
           </ul>
         </div>
         <div>
@@ -272,6 +285,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20260708b" defer></script>
+<script src="../script.js?v=20260708b" defer></script>
 </body>
 </html>

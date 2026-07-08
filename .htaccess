@@ -20,6 +20,8 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 # --- Redirections 301 : restructuration en silos (8 juil. 2026) ---
 RewriteRule ^creation-site-internet/?$ /creation-et-refonte-site/creation-site-internet [R=301,L]
 RewriteRule ^refonte-site-internet/?$ /creation-et-refonte-site/refonte-site-internet [R=301,L]
+RewriteRule ^formation-ia/?$ /intelligence-artificielle/formation-ia [R=301,L]
+RewriteRule ^agents-ia-entreprise/?$ /intelligence-artificielle/agents-ia-entreprise [R=301,L]
 
 # --- Redirections 301 : anciennes URLs du site (capital SEO ~40 URLs indexées) ---
 RewriteRule ^nos-specialites-automatisation-ia/?$ /agents-ia-entreprise [R=301,L]
