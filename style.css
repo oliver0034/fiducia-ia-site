@@ -369,6 +369,32 @@ img { max-width: 100%; height: auto; }
 .offer__link::after { content: "→"; transition: transform 0.2s; }
 .offer:hover .offer__link::after { transform: translateX(4px); }
 
+/* ---------- Liste d'articles (actualités) ---------- */
+.article-list { display: flex; flex-direction: column; gap: 18px; }
+.article-card {
+  display: block; position: relative;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 30px;
+  transition: border-color 0.25s, box-shadow 0.25s, background-color 0.25s;
+}
+.article-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 8px 40px rgba(46, 143, 255, 0.14);
+  background: #101a2f;
+}
+.article-card__meta {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 10px;
+  font-size: 0.85rem; color: var(--text-muted);
+}
+.article-card__tag {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--cyan);
+  background: rgba(55, 200, 255, 0.1); border: 1px solid var(--border-strong);
+  padding: 3px 10px; border-radius: 999px;
+}
+.article-card h2 { font-size: 1.3rem; margin-bottom: 8px; }
+.article-card p { font-size: 0.96rem; color: var(--text-muted); margin-bottom: 14px; }
+
 /* ---------- Chiffres / urgence ---------- */
 .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .fact {

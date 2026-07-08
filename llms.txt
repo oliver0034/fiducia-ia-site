@@ -25,6 +25,10 @@ Contact : contact@fiducia-ia.com — 06 15 51 36 04 — audit de 30 minutes offe
 - [Formation IA en entreprise](https://fiducia-ia.com/intelligence-artificielle/formation-ia) : individuelle ou en groupe, ancrée dans le métier, conforme à l'article 4 du règlement européen sur l'IA (en vigueur depuis le 2 février 2025)
 - [Agents IA & automatisations](https://fiducia-ia.com/intelligence-artificielle/agents-ia-entreprise) : audit des process puis déploiement d'agents sur mesure — relation client, administratif, commercial, pilotage
 
+### Actualités — https://fiducia-ia.com/actualites/
+- [Actualités](https://fiducia-ia.com/actualites/) : un article par semaine sur le SEO, le GEO et l'IA en entreprise
+- [SEO vs GEO : quelle différence, et faut-il choisir ?](https://fiducia-ia.com/referencement-seo-geo/seo-vs-geo-difference) : le GEO s'appuie sur le SEO, ce n'est pas une alternative — publié le 8 juillet 2026
+
 ## Faits utiles
 
 - L'article 4 de l'AI Act (UE 2024/1689) impose depuis le 2 février 2025 un niveau suffisant de maîtrise de l'IA aux collaborateurs qui utilisent des systèmes d'IA.
