@@ -143,11 +143,16 @@
     }
   }
 
-  /* ----- Fond animé des heros (accueil + pages intérieures) -----
-     Effet principal : simulation de fluide "encre" WebGL2 (fluidHero).
+  /* ----- Fonds animés (hero + footer) -----
+     Effet principal : simulation de fluide "encre" WebGL2 (fluidHero),
+     une instance par canvas — chacune se met en pause hors viewport,
+     donc une seule tourne à la fois en pratique.
      Fallback si WebGL2 indisponible : aurora 2D (auroraFallback). */
+  var fxCanvases = [];
   var heroFxCanvas = document.getElementById("shader-canvas") || document.getElementById("neural-canvas");
-  if (heroFxCanvas && !fluidHero(heroFxCanvas)) auroraFallback(heroFxCanvas);
+  if (heroFxCanvas) fxCanvases.push(heroFxCanvas);
+  document.querySelectorAll(".fluid-canvas").forEach(function (c) { fxCanvases.push(c); });
+  fxCanvases.forEach(function (c) { if (!fluidHero(c)) auroraFallback(c); });
 
   /* ----- Fallback Aurora Gradient (canvas 2D) -----
      Blobs dégradés en blending additif, curseur à ressort (effet magnétique
@@ -701,12 +706,14 @@
       requestAnimationFrame(loop);
     }
 
-    /* Hook de test — exposé uniquement en local */
+    /* Hook de test — exposé uniquement en local (une entrée par canvas) */
     if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
-      window.__fluidHero = {
+      window.__fluidHero = window.__fluidHero || [];
+      window.__fluidHero.push({
+        canvas: canvas,
         stepN: function (n) { var t = performance.now(); for (var i = 0; i < n; i++) { t += 16.7; update(t); } },
         splat: function (x, y, dx, dy) { splat(x, y, dx, dy, nextInk()); }
-      };
+      });
     }
 
     return true;
