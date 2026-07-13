@@ -187,13 +187,28 @@ img { max-width: 100%; height: auto; }
 }
 #neural-canvas, #shader-canvas {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  z-index: 0; opacity: 0.85;
+  z-index: 0; opacity: 1;
 }
-#shader-canvas { opacity: 0.85; }
+/* Vignette légère façon démo : bords fondus, encre pleine au centre */
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: 1;
-  background: radial-gradient(ellipse at 70% 30%, transparent 0%, var(--bg) 78%);
+  background: radial-gradient(ellipse at 50% 45%, transparent 30%, rgba(5, 7, 13, 0.75) 100%);
   pointer-events: none;
+}
+/* Grain animé au-dessus de l'aurora (SVG feTurbulence inline, aucun asset) */
+.hero__grain {
+  position: absolute; inset: -100px; z-index: 1;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain-shift 0.9s steps(3) infinite;
+}
+@keyframes grain-shift {
+  0%   { transform: translate3d(0, 0, 0); }
+  33%  { transform: translate3d(-40px, 25px, 0); }
+  66%  { transform: translate3d(30px, -35px, 0); }
+  100% { transform: translate3d(0, 0, 0); }
 }
 .hero__content { position: relative; z-index: 2; }
 .hero__eyebrow {
@@ -245,7 +260,7 @@ img { max-width: 100%; height: auto; }
     var(--bg-soft);
   border-bottom: 1px solid var(--border);
 }
-.page-hero #neural-canvas { z-index: 0; opacity: 0.5; }
+.page-hero #neural-canvas { z-index: 0; opacity: 0.95; }
 .page-hero .container { position: relative; z-index: 2; }
 .page-hero h1 { max-width: 22ch; margin-bottom: 20px; font-size: clamp(2rem, 4.5vw, 3.2rem); }
 .page-hero .hero__sub { font-size: 1.12rem; margin-bottom: 32px; }
@@ -850,6 +865,6 @@ h2.reveal.is-visible::after, .reveal.is-visible h2::after { width: 68px; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .typed-cursor, .hero__eyebrow .dot { animation: none; }
+  .typed-cursor, .hero__eyebrow .dot, .hero__grain { animation: none; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
