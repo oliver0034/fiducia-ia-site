@@ -304,16 +304,22 @@
     if (!gl || !gl.getExtension("EXT_color_buffer_float")) return false;
 
     var coarse = window.matchMedia("(pointer: coarse)").matches;
+    /* Mode "subtil" pour le footer : l'encre reste un FOND — atténuée,
+       dissipation forte (pas d'accumulation), impulsions plus rares.
+       Sur mobile, dissipation renforcée partout : le scroll tactile
+       injecte de l'encre en continu et saturait la carte vers le blanc. */
+    var subtle = canvas.classList.contains("fluid-canvas");
     var CONFIG = {
       SIM_RES: coarse ? 96 : 144,
       DYE_RES: coarse ? 448 : 1024,
       PRESSURE_ITERS: coarse ? 10 : 16,
       CURL: 42,
       VELOCITY_DISSIPATION: 0.55,
-      DYE_DISSIPATION: 0.45,
+      DYE_DISSIPATION: subtle ? 1.2 : (coarse ? 1.0 : 0.45),
       SPLAT_FORCE: 7500,
       SPLAT_RADIUS: 0.0055,
-      AUTO_SPLAT_EVERY: 0.55
+      AUTO_SPLAT_EVERY: subtle ? 0.7 : 0.55,
+      INK_GAIN: subtle ? 0.6 : (coarse ? 0.7 : 1)
     };
 
     /* Palette alchimie — identique à la démo preview validée */
@@ -560,7 +566,7 @@
     function nextInk() {
       inkIndex = (inkIndex + 1) % INK.length;
       var c = INK[inkIndex];
-      var v = 0.75 + 0.5 * ((inkIndex * 0.37) % 1);
+      var v = (0.75 + 0.5 * ((inkIndex * 0.37) % 1)) * CONFIG.INK_GAIN;
       return [c[0] * v, c[1] * v, c[2] * v];
     }
 
@@ -675,11 +681,15 @@
       last = now;
       if (pointer.moved) {
         pointer.moved = false;
-        var dx = (pointer.x - pointer.px) * CONFIG.SPLAT_FORCE;
-        var dy = (pointer.y - pointer.py) * CONFIG.SPLAT_FORCE;
-        pointer.colorT += Math.abs(dx) + Math.abs(dy);
-        if (pointer.colorT > 900) { pointer.colorT = 0; pointer.color = nextInk(); }
-        splat(pointer.x, pointer.y, dx, dy, pointer.color);
+        /* On n'injecte de l'encre que si le pointeur est sur le canvas —
+           sinon le scroll tactile sature la simulation depuis n'importe où */
+        if (pointer.x >= -0.02 && pointer.x <= 1.02 && pointer.y >= -0.02 && pointer.y <= 1.02) {
+          var dx = (pointer.x - pointer.px) * CONFIG.SPLAT_FORCE;
+          var dy = (pointer.y - pointer.py) * CONFIG.SPLAT_FORCE;
+          pointer.colorT += Math.abs(dx) + Math.abs(dy);
+          if (pointer.colorT > 900) { pointer.colorT = 0; pointer.color = nextInk(); }
+          splat(pointer.x, pointer.y, dx, dy, pointer.color);
+        }
       }
       autoSplat(dt);
       step(dt);
