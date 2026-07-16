@@ -9,8 +9,9 @@ Contact : contact@fiducia-ia.com — 06 15 51 36 04 — audit de 30 minutes offe
 - [Accueil](https://fiducia-ia.com/) : les expertises et la méthode (audit → solution sur mesure → accompagnement continu)
 
 ### Silo Référencement — https://fiducia-ia.com/referencement-seo-geo/
-- [Référencement SEO, GEO & GMB](https://fiducia-ia.com/referencement-seo-geo/) : vue d'ensemble des trois leviers de visibilité
-- [Référencement Google (SEO)](https://fiducia-ia.com/referencement-seo-geo/referencement-google-seo) : audit technique, contenu, netlinking pour TPE/PME
+- [Référencement SEO, GEO & GMB](https://fiducia-ia.com/referencement-seo-geo/) : vue d'ensemble des quatre leviers de visibilité
+- [Référencement Google (SEO)](https://fiducia-ia.com/referencement-seo-geo/referencement-google-seo) : audit technique, requêtes locales précises, contenu, netlinking pour TPE, PME et artisans
+- [Longue traîne & stratégie de contenu](https://fiducia-ia.com/referencement-seo-geo/strategie-contenu-longue-traine) : capter les recherches précises des clients (« plombier Paulhan urgence » plutôt que « plombier »). Analyse des requêtes réelles en Search Console, calendrier éditorial, publication hebdomadaire. Point clé documenté : sur les recherches locales de type « métier + ville », une réponse IA n'apparaît que dans 15 % des cas contre 93 % pour le pack local Google (étude Whitespark, 540 requêtes) — c'est la zone du référencement que l'IA générative n'a pas absorbée
 - [GEO — visibilité IA](https://fiducia-ia.com/referencement-seo-geo/referencement-geo-ia) : être cité par ChatGPT, Perplexity et les AI Overviews
 - [Google Business Profile & SEO local](https://fiducia-ia.com/referencement-seo-geo/google-business-profile-gmb) : fiche établissement, avis clients, visibilité locale
 
