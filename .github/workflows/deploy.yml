@@ -1,19 +1,16 @@
 name: Déploiement Hostinger
 
-# Déploie le site vers Hostinger par FTP :
-# - automatiquement à chaque push/merge sur main
-# - manuellement depuis l'onglet Actions (bouton "Run workflow") ou via l'API
-#
-# Prérequis (une seule fois) — 3 secrets à créer dans
-# Settings → Secrets and variables → Actions :
-#   FTP_SERVER    : hôte FTP Hostinger (ex. ftp.fiducia-ia.com ou l'IP indiquée dans hPanel)
-#   FTP_USERNAME  : utilisateur FTP (créer dans hPanel un compte dont le dossier
-#                   racine est le public_html du domaine fiducia-ia.com)
+# Solution de secours manuelle : le déploiement principal passe par
+# l'intégration Git native de Hostinger (hPanel → Avancé → GIT, webhook
+# automatique sur push main), comme pour gold-strategies-site.
+# Ce workflow ne sert que si le déploiement Git Hostinger est indisponible.
+# Il se lance depuis l'onglet Actions ("Run workflow") ou via l'API, et
+# nécessite 3 secrets dans Settings → Secrets and variables → Actions :
+#   FTP_SERVER    : hôte FTP Hostinger (ex. ftp.fiducia-ia.com)
+#   FTP_USERNAME  : compte FTP dont la racine est le public_html du domaine
 #   FTP_PASSWORD  : mot de passe de ce compte FTP
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
 
 concurrency:
