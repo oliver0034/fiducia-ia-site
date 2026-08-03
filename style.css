@@ -880,3 +880,58 @@ h2.reveal.is-visible::after, .reveal.is-visible h2::after { width: 68px; }
   .typed-cursor, .hero__eyebrow .dot, .hero__grain { animation: none; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* ---------- Barre d'action mobile (CTA persistant) ---------- */
+/* Sous 1199px, la nav est repliée dans le burger : sans cette barre,
+   aucun CTA n'est visible une fois la page scrollée. */
+.action-bar { display: none; }
+@media (max-width: 1199px) {
+  .action-bar {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: var(--z-nav);
+    padding: 10px; border-radius: 18px;
+    background: rgba(10, 15, 28, 0.94);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+    border: 1px solid var(--border-strong);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55);
+  }
+  .action-bar a {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: 48px; padding: 12px 14px; border-radius: 12px;
+    font-family: var(--font-head); font-size: 0.95rem; font-weight: 600;
+    text-decoration: none; text-align: center; line-height: 1.2;
+  }
+  .action-bar svg { width: 18px; height: 18px; flex: none; }
+  .action-bar__call { color: var(--text); border: 1px solid var(--border-strong); background: rgba(46, 143, 255, 0.08); }
+  .action-bar__cta { color: #04101f; background: var(--gradient); box-shadow: 0 6px 20px var(--glow); }
+  body { padding-bottom: 92px; }
+}
+@media (prefers-reduced-motion: reduce) { .action-bar { transition: none; } }
+
+/* ---------- Formulaire de contact ---------- */
+.form-card {
+  border: 1px solid var(--border-strong); border-radius: 20px;
+  background: var(--bg-card); padding: 28px;
+}
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-field { display: flex; flex-direction: column; gap: 8px; }
+.form-field--full { grid-column: 1 / -1; }
+.form-field label { font-family: var(--font-head); font-size: 0.9rem; font-weight: 600; color: var(--text); }
+.form-field label span { color: var(--cyan); }
+.form-field input, .form-field textarea {
+  width: 100%; padding: 13px 15px; border-radius: 12px;
+  border: 1px solid var(--border); background: var(--bg-soft);
+  color: var(--text); font-family: var(--font-body); font-size: 1rem;
+}
+.form-field input:focus, .form-field textarea:focus {
+  outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(46, 143, 255, 0.18);
+}
+.form-field textarea { min-height: 130px; resize: vertical; }
+.form-field small { color: var(--text-muted); font-size: 0.85rem; }
+.form-pot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-note { color: var(--text-muted); font-size: 0.88rem; margin: 16px 0 0; }
+.form-alert {
+  border-radius: 12px; padding: 13px 16px; margin-bottom: 20px; font-size: 0.94rem;
+  border: 1px solid rgba(255, 138, 138, 0.45); background: rgba(255, 90, 90, 0.09); color: #ffd9d9;
+}
+@media (max-width: 720px) { .form-grid { grid-template-columns: 1fr; } .form-card { padding: 20px; } }
