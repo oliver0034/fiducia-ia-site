@@ -1,15 +1,27 @@
 name: Déploiement Hostinger
 
-# VOIE DE DÉPLOIEMENT OFFICIELLE du site fiducia-ia.com.
+# SOLUTION DE SECOURS. Non configurée à ce jour (aucun secret défini).
 #
 # ⚠️ Corrigé le 11/08/2026. L'en-tête précédent affirmait que le déploiement
 # passait par « l'intégration Git native de Hostinger, webhook automatique sur
-# push main ». C'était FAUX : vérification faite dans hPanel → fiducia-ia.com →
+# push main ». C'est FAUX : vérification faite dans hPanel → fiducia-ia.com →
 # Avancé → GIT, le seul dépôt connecté est mg-traiteur-ops (vers
 # public_html/mg-ops), et Hostinger n'autorise qu'une connexion Git par site.
-# Ce dépôt-ci n'a jamais été déployé automatiquement.
 #
-# Lancement : onglet Actions → « Déploiement Hostinger » → Run workflow.
+# ✅ LA VRAIE VOIE, celle qu'utilise la routine `fiducia-ia-blog-hebdo`
+# (~/.claude/scheduled-tasks/fiducia-ia-blog-hebdo/SKILL.md, étape 4) :
+# push sur GitHub, puis upload fichier par fichier via l'API du gestionnaire
+# de fichiers hPanel — token de session dans l'URL + JWT depuis le
+# localStorage, POST vers
+# https://srv1425-files.hstgr.io/<token>/api/resources/public_html/<chemin>?override=true
+# avec le contenu récupéré sur raw.githubusercontent.com.
+# Aucun mot de passe, et surtout : chirurgical.
+#
+# ⚠️ public_html/ contient AUSSI mg-ops/ (MG Traiteur) et pilotage/.
+# Tout déploiement en masse ou par archive les écraserait. Toujours procéder
+# fichier par fichier.
+#
+# Lancement de ce workflow de secours : onglet Actions → Run workflow.
 #
 # Nécessite 3 secrets dans Settings → Secrets and variables → Actions :
 #   FTP_SERVER    = ftp.fiducia-ia.com
