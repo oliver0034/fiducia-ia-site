@@ -1,14 +1,27 @@
 name: Déploiement Hostinger
 
-# Solution de secours manuelle : le déploiement principal passe par
-# l'intégration Git native de Hostinger (hPanel → Avancé → GIT, webhook
-# automatique sur push main), comme pour gold-strategies-site.
-# Ce workflow ne sert que si le déploiement Git Hostinger est indisponible.
-# Il se lance depuis l'onglet Actions ("Run workflow") ou via l'API, et
-# nécessite 3 secrets dans Settings → Secrets and variables → Actions :
-#   FTP_SERVER    : hôte FTP Hostinger (ex. ftp.fiducia-ia.com)
-#   FTP_USERNAME  : compte FTP dont la racine est le public_html du domaine
-#   FTP_PASSWORD  : mot de passe de ce compte FTP
+# VOIE DE DÉPLOIEMENT OFFICIELLE du site fiducia-ia.com.
+#
+# ⚠️ Corrigé le 11/08/2026. L'en-tête précédent affirmait que le déploiement
+# passait par « l'intégration Git native de Hostinger, webhook automatique sur
+# push main ». C'était FAUX : vérification faite dans hPanel → fiducia-ia.com →
+# Avancé → GIT, le seul dépôt connecté est mg-traiteur-ops (vers
+# public_html/mg-ops), et Hostinger n'autorise qu'une connexion Git par site.
+# Ce dépôt-ci n'a jamais été déployé automatiquement.
+#
+# Lancement : onglet Actions → « Déploiement Hostinger » → Run workflow.
+#
+# Nécessite 3 secrets dans Settings → Secrets and variables → Actions :
+#   FTP_SERVER    = ftp.fiducia-ia.com
+#   FTP_USERNAME  = u434034366.fiducia-ia.com
+#   FTP_PASSWORD  = mot de passe de ce compte FTP (hPanel → Fichiers →
+#                   Comptes FTP → « Changer le mot de passe FTP »)
+#
+# ⚠️ server-dir : le compte u434034366.fiducia-ia.com atterrit dans
+# /home/u434034366/domains/fiducia-ia.com/, PAS dans le public_html.
+# hPanel l'indique : « Folder to upload files : public_html ».
+# D'où server-dir: public_html/ — avec ./ les fichiers se déposeraient à côté
+# du site, sans aucun effet visible.
 
 on:
   workflow_dispatch:
@@ -32,7 +45,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
-          server-dir: ./
+          server-dir: public_html/
           exclude: |
             **/.git*
             **/.git*/**
