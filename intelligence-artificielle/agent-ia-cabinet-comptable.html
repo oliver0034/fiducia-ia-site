@@ -18,7 +18,7 @@
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C_k3HqUtEw.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../style.css?v=20260804">
+  <link rel="stylesheet" href="../style.css?v=20260815">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -43,6 +43,62 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Un agent IA va-t-il remplacer mes collaborateurs ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non, et l'inverse est plus proche de ce que nous observons : dans une profession où le recrutement de profils qualifiés est difficile, l'agent absorbe le travail que personne ne veut faire et que personne n'a le temps de faire. Il ne révise pas un dossier, ne signe rien et ne conseille personne. Ce qu'il change, c'est la répartition d'une journée : moins de relances et de classement, plus de révision et de contact client."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Nos données clients sortent-elles du cabinet ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cela dépend entièrement de la solution retenue, et c'est le premier point que nous tranchons avec vous — avant de parler de fonctionnalités. Hébergement européen, cloisonnement des données, absence de réutilisation pour l'entraînement des modèles, règles d'usage écrites pour les équipes : ces exigences se paramètrent, mais elles se paramètrent au début. La charte d'utilisation de l'IA générative publiée par le Conseil national de l'Ordre sert de cadre."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Faut-il changer de logiciel de production comptable ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. Un agent IA se branche sur l'existant — messagerie, plateforme de collecte, outil de production, agenda. L'audit cartographie votre environnement actuel et la solution s'y intègre. Une migration d'outil de production est un projet en soi ; ce n'en est pas un."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de temps pour déployer un premier agent ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Une automatisation simple — relance des pièces manquantes, tri du courrier entrant — se déploie en quelques jours. Un agent qui répond aux clients demande généralement quelques semaines : le temps de l'entraîner sur vos règles, de le tester sur des cas réels et de valider ses réponses avant qu'il ne s'adresse à qui que ce soit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien ça coûte ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cela dépend du périmètre, et l'audit chiffre d'abord le gain attendu — heures récupérées, frais évités — avant que le devis ne s'y cale. Vous savez donc avant de signer si l'investissement est rentable et en combien de mois. Un chantier peut se concevoir petit à petit, en commençant par une automatisation simple à tarif raisonnable ; le temps libéré finance naturellement la suite."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sommes-nous concernés par l'obligation de formation à l'IA ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, dès lors que vos collaborateurs utilisent des systèmes d'IA dans le cadre de leur travail. L'article 4 du règlement européen sur l'IA impose depuis le 2 février 2025 un niveau suffisant de maîtrise de l'IA aux personnes qui exploitent ces systèmes pour le compte de l'entreprise. Concrètement : comprendre ce que l'outil peut faire, ce qu'il ne peut pas faire, et ce qu'on n'a pas le droit de lui confier."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -55,6 +111,21 @@
   </button>
   <ul class="nav__links">
     <li><a href="/">Accueil</a></li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/automatisation/">Automatisation</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-automatisation" aria-label="Sous-menu Automatisation">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-automatisation">
+      <li><a href="/automatisation/">Vue d'ensemble</a></li>
+      <li><a href="/automatisation/facturation-electronique-tpe-pme">Facturation électronique</a></li>
+      <li><a href="/automatisation/accompagnement-n8n">Accompagnement n8n</a></li>
+      <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA &amp; workflows</a></li>
+      <li><a href="/intelligence-artificielle/agent-ia-cabinet-comptable">Cabinets comptables</a></li>
+      </ul>
+    </li>
     <li class="nav__item nav__item--dropdown">
       <span class="nav__link-group">
         <a class="nav__toplink" href="/referencement-seo-geo/">SEO &amp; GEO</a>
@@ -96,6 +167,7 @@
       <li><a href="/intelligence-artificielle/">Vue d'ensemble</a></li>
       <li><a href="/intelligence-artificielle/formation-ia">Formation IA</a></li>
       <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA & automatisations</a></li>
+      <li><a href="/intelligence-artificielle/agent-ia-definition-entreprise">Agent IA : définition</a></li>
       </ul>
     </li>
     <li><a href="/actualites/">Actualités</a></li>
@@ -227,6 +299,8 @@
         <div>
           <h4>Expertises</h4>
           <ul>
+            <li><a href="/automatisation/">Agence d'automatisation</a></li>
+            <li><a href="/automatisation/facturation-electronique-tpe-pme">Facturation électronique</a></li>
             <li><a href="/referencement-seo-geo/referencement-google-seo">Référencement Google (SEO)</a></li>
             <li><a href="/referencement-seo-geo/strategie-contenu-longue-traine">Longue traîne &amp; contenu</a></li>
             <li><a href="/referencement-seo-geo/referencement-geo-ia">GEO — visibilité IA</a></li>

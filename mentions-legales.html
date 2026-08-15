@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
-  <link rel="stylesheet" href="style.css?v=20260804">
+  <link rel="stylesheet" href="style.css?v=20260815">
 </head>
 <body>
 
@@ -24,6 +24,21 @@
   </button>
   <ul class="nav__links">
     <li><a href="/">Accueil</a></li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/automatisation/">Automatisation</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-automatisation" aria-label="Sous-menu Automatisation">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-automatisation">
+      <li><a href="/automatisation/">Vue d'ensemble</a></li>
+      <li><a href="/automatisation/facturation-electronique-tpe-pme">Facturation électronique</a></li>
+      <li><a href="/automatisation/accompagnement-n8n">Accompagnement n8n</a></li>
+      <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA &amp; workflows</a></li>
+      <li><a href="/intelligence-artificielle/agent-ia-cabinet-comptable">Cabinets comptables</a></li>
+      </ul>
+    </li>
     <li class="nav__item nav__item--dropdown">
       <span class="nav__link-group">
         <a class="nav__toplink" href="/referencement-seo-geo/">SEO &amp; GEO</a>
@@ -65,6 +80,7 @@
       <li><a href="/intelligence-artificielle/">Vue d'ensemble</a></li>
       <li><a href="/intelligence-artificielle/formation-ia">Formation IA</a></li>
       <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA & automatisations</a></li>
+      <li><a href="/intelligence-artificielle/agent-ia-definition-entreprise">Agent IA : définition</a></li>
       </ul>
     </li>
     <li><a href="/actualites/">Actualités</a></li>

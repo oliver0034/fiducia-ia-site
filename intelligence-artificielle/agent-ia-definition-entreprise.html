@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent IA : définition, fonctionnement et cas d'usage en entreprise | Fiducia IA</title>
+  <meta name="description" content="Ce qu'est réellement un agent IA, ce qui le distingue d'un chatbot et d'un assistant virtuel, ce qu'il prend en charge dans une PME, et les trois limites à connaître avant de se lancer.">
+  <link rel="canonical" href="https://fiducia-ia.com/intelligence-artificielle/agent-ia-definition-entreprise">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Agent IA : définition, fonctionnement et cas d'usage en entreprise | Fiducia IA">
+  <meta property="og:description" content="La définition utile, la différence réelle avec un chatbot, et ce qu'un agent prend en charge dans une entreprise de moins de cinquante personnes.">
+  <meta property="og:url" content="https://fiducia-ia.com/intelligence-artificielle/agent-ia-definition-entreprise">
+  <meta property="og:image" content="https://fiducia-ia.com/assets/logo-fiducia-ia.png">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C_k3HqUtEw.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css?v=20260815">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Agent IA : définition, fonctionnement et cas d'usage en entreprise",
+    "description": "Ce qu'est réellement un agent IA, ce qui le distingue d'un chatbot et d'un assistant virtuel, ce qu'il prend en charge dans une PME et les trois limites à connaître avant de se lancer.",
+    "url": "https://fiducia-ia.com/intelligence-artificielle/agent-ia-definition-entreprise",
+    "datePublished": "2026-08-15",
+    "dateModified": "2026-08-15",
+    "author": { "@type": "Organization", "@id": "https://fiducia-ia.com/#organization", "name": "Fiducia IA", "url": "https://fiducia-ia.com/" },
+    "publisher": { "@type": "Organization", "@id": "https://fiducia-ia.com/#organization", "name": "Fiducia IA", "url": "https://fiducia-ia.com/",
+      "logo": { "@type": "ImageObject", "url": "https://fiducia-ia.com/assets/logo-fiducia-ia.png" } },
+    "mainEntityOfPage": "https://fiducia-ia.com/intelligence-artificielle/agent-ia-definition-entreprise"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://fiducia-ia.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Intelligence artificielle", "item": "https://fiducia-ia.com/intelligence-artificielle/" },
+      { "@type": "ListItem", "position": 3, "name": "Agent IA : définition", "item": "https://fiducia-ia.com/intelligence-artificielle/agent-ia-definition-entreprise" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce qu'un agent IA ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un agent IA est un programme qui poursuit un objectif défini en enchaînant lui-même plusieurs étapes : il consulte des informations, appelle des outils, décide de l'action suivante en fonction du résultat obtenu, et recommence jusqu'à atteindre l'objectif ou buter sur un cas qu'il ne sait pas traiter. La différence avec un programme classique tient là : on lui donne un but et des moyens, pas une liste d'instructions figées."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle différence entre un agent IA, un chatbot et un assistant virtuel ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un chatbot répond à des questions dans une conversation : il produit du texte. Un assistant virtuel exécute des commandes qu'on lui donne, une par une. Un agent IA agit de sa propre initiative dans un cadre fixé : il peut lire une pièce jointe, la classer, mettre à jour une fiche client et déclencher une relance, sans qu'on lui demande chaque étape. Les trois termes sont souvent employés l'un pour l'autre dans le commerce ; la vraie question à poser à un prestataire est : est-ce que ça se contente de répondre, ou est-ce que ça agit dans mes outils ?"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Un agent IA peut-il se tromper ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, et c'est la raison pour laquelle la question de conception la plus importante n'est pas ce que l'agent sait faire, mais où on l'arrête. Un agent qui prépare une réponse et la soumet à validation fait une erreur sans conséquence. Un agent qui envoie, paie ou signe transforme la même erreur en incident. La règle que nous appliquons : rien d'irréversible sans qu'un humain l'ait vu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Faut-il une grande entreprise pour utiliser un agent IA ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non, et l'intérêt est souvent inverse. Dans une grande structure, la tâche répétitive est confiée à une équipe dédiée. Dans une TPE, elle est portée par le dirigeant ou par une seule personne, en plus du reste — c'est là que quelques heures récupérées par semaine changent le quotidien. Ce qui compte n'est pas la taille, c'est que la tâche soit répétitive, fréquente et décrite par des règles stables."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien coûte un agent IA pour une PME ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Il n'y a pas de prix de catalogue honnête, parce que le coût dépend du nombre d'outils à connecter et du volume traité. Ce qui peut se dire : le calcul se fait à l'envers. On mesure d'abord le temps réellement consommé par la tâche, on en déduit ce qu'elle coûte par an, et on compare. Si l'automatisation ne se rembourse pas en quelques mois, elle ne mérite pas d'être faite — et c'est une conclusion que nous rendons aussi."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Navigation principale">
+  <a class="nav__logo" href="/" aria-label="Fiducia IA — accueil">
+    <img src="../assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="174" height="58">
+  </a>
+  <button class="nav__burger" aria-expanded="false" aria-label="Ouvrir le menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links">
+    <li><a href="/">Accueil</a></li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/automatisation/">Automatisation</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-automatisation" aria-label="Sous-menu Automatisation">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-automatisation">
+      <li><a href="/automatisation/">Vue d'ensemble</a></li>
+      <li><a href="/automatisation/facturation-electronique-tpe-pme">Facturation électronique</a></li>
+      <li><a href="/automatisation/accompagnement-n8n">Accompagnement n8n</a></li>
+      <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA &amp; workflows</a></li>
+      <li><a href="/intelligence-artificielle/agent-ia-cabinet-comptable">Cabinets comptables</a></li>
+      </ul>
+    </li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/referencement-seo-geo/">SEO &amp; GEO</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-referencement" aria-label="Sous-menu Référencement">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-referencement">
+      <li><a href="/referencement-seo-geo/">Vue d'ensemble</a></li>
+      <li><a href="/referencement-seo-geo/referencement-google-seo">Référencement Google (SEO)</a></li>
+      <li><a href="/referencement-seo-geo/strategie-contenu-longue-traine">Longue traîne &amp; contenu</a></li>
+      <li><a href="/referencement-seo-geo/referencement-geo-ia">GEO — visibilité IA</a></li>
+      <li><a href="/referencement-seo-geo/google-business-profile-gmb">Google Business Profile</a></li>
+      <li><a href="/clients-cites-par-ia/">Nos clients cités par l'IA</a></li>
+      </ul>
+    </li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/creation-et-refonte-site/">Création &amp; Refonte</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-creation" aria-label="Sous-menu Création & Refonte">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-creation">
+      <li><a href="/creation-et-refonte-site/">Vue d'ensemble</a></li>
+      <li><a href="/creation-et-refonte-site/creation-site-internet">Création de site internet</a></li>
+      <li><a href="/creation-et-refonte-site/refonte-site-internet">Refonte de site internet</a></li>
+      <li><a href="/creation-et-refonte-site/creation-application-pme">Création d'applications PME</a></li>
+      </ul>
+    </li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/intelligence-artificielle/">Intelligence artificielle</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-ia" aria-label="Sous-menu Intelligence artificielle">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-ia">
+      <li><a href="/intelligence-artificielle/">Vue d'ensemble</a></li>
+      <li><a href="/intelligence-artificielle/formation-ia">Formation IA</a></li>
+      <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA & automatisations</a></li>
+      </ul>
+    </li>
+    <li><a href="/actualites/">Actualités</a></li>
+    <li><a href="/a-propos">À propos</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li><a class="btn btn--primary" href="https://calendly.com/fiducia-ia/30min" style="padding:10px 20px">Audit 30 min</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero">
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/intelligence-artificielle/">Intelligence artificielle</a></li>
+      <li>Agent IA : définition</li>
+    </ol>
+    <h1>Agent IA&nbsp;: <span class="grad-text">ce que c'est, ce que ça fait, ce que ça ne fait pas</span></h1>
+    <p class="hero__sub">Le mot est employé pour tout et n'importe quoi depuis deux ans — un chatbot rebaptisé, un script automatisé, parfois un simple formulaire. Voici la définition utile, la différence réelle avec un chatbot et un assistant virtuel, et ce qu'un agent prend en charge dans une entreprise de moins de cinquante personnes.</p>
+  </div>
+</header>
+
+<main>
+  <article class="section">
+    <div class="container prose">
+
+      <h2 class="reveal">La définition, en une phrase</h2>
+      <p class="reveal"><strong>Un agent IA est un programme qui poursuit un objectif en enchaînant lui-même plusieurs étapes.</strong> Il consulte des informations, appelle des outils, regarde le résultat, en déduit l'action suivante, et recommence jusqu'à atteindre le but — ou jusqu'à buter sur un cas qu'il ne sait pas traiter.</p>
+      <p class="reveal">La différence avec un logiciel ordinaire tient entièrement là. À un programme classique, on donne une suite d'instructions&nbsp;: fais ceci, puis cela. À un agent, on donne un objectif et des moyens&nbsp;: «&nbsp;classe les factures qui arrivent, et préviens-moi quand le montant ne correspond pas à la commande&nbsp;». C'est lui qui décide de la marche à suivre, cas par cas.</p>
+
+      <h2 class="reveal">Agent IA, chatbot, assistant virtuel&nbsp;: la confusion utile à dissiper</h2>
+      <p class="reveal">Les trois mots sont employés l'un pour l'autre dans le commerce, ce qui rend les devis difficiles à comparer. La distinction pratique est simple.</p>
+
+      <div class="table-wrap reveal">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Chatbot</th>
+              <th scope="col">Assistant virtuel</th>
+              <th scope="col">Agent IA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Ce qu'il produit</th>
+              <td>Du texte, dans une conversation</td>
+              <td>Une action, à la demande</td>
+              <td>Une suite d'actions, de sa propre initiative</td>
+            </tr>
+            <tr>
+              <th scope="row">Qui décide de l'étape suivante</th>
+              <td>L'utilisateur, en posant la question suivante</td>
+              <td>L'utilisateur, en donnant la commande suivante</td>
+              <td>L'agent, selon le résultat obtenu</td>
+            </tr>
+            <tr>
+              <th scope="row">Accès à vos outils</th>
+              <td>Rarement</td>
+              <td>Limité, sur commande</td>
+              <td>Oui, c'est le principe</td>
+            </tr>
+            <tr>
+              <th scope="row">Exemple</th>
+              <td>Répond aux questions sur vos horaires</td>
+              <td>Crée un rendez-vous quand on le lui demande</td>
+              <td>Lit une demande, la qualifie, crée le rendez-vous et prévient le commercial</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="reveal">La question à poser à un prestataire découle directement de ce tableau&nbsp;: <em>est-ce que ça se contente de répondre, ou est-ce que ça agit dans mes outils&nbsp;?</em> Les deux ont leur usage et leurs prix n'ont rien à voir.</p>
+
+      <h2 class="reveal">Comment un agent fonctionne, concrètement</h2>
+      <p class="reveal">Sans entrer dans la technique, un agent repose sur quatre éléments — et c'est utile à connaître, parce que chacun est un point où un projet réussit ou échoue&nbsp;:</p>
+      <ul class="check-list reveal">
+        <li><strong>Un objectif</strong>, écrit noir sur blanc. «&nbsp;Traiter les demandes entrantes&nbsp;» n'est pas un objectif. «&nbsp;Qualifier chaque demande selon ces cinq critères et l'orienter vers l'une de ces trois files&nbsp;» en est un.</li>
+        <li><strong>Du contexte</strong>&nbsp;: vos règles métier, vos tarifs, vos exceptions. Un agent sans contexte produit des réponses génériques que vos clients repèrent immédiatement.</li>
+        <li><strong>Des outils</strong>&nbsp;: l'accès à votre messagerie, votre agenda, votre fichier client. C'est ce qui le distingue d'un chatbot, et c'est aussi ce qui exige d'être prudent sur les droits qu'on lui donne.</li>
+        <li><strong>Une limite</strong>&nbsp;: ce qu'il n'a pas le droit de faire seul. C'est le paramètre le plus important, et le plus souvent oublié dans les projets qui tournent mal.</li>
+      </ul>
+
+      <h2 class="reveal">Ce qu'un agent prend en charge dans une PME</h2>
+      <p class="reveal">Les usages qui tiennent dans la durée ont tous le même profil&nbsp;: une tâche fréquente, aux règles stables, dont le résultat est vérifiable.</p>
+      <ul class="check-list reveal">
+        <li><strong>Traiter les documents entrants</strong> — factures, devis signés, justificatifs&nbsp;: lecture, extraction, classement, enregistrement, sans ressaisie.</li>
+        <li><strong>Qualifier les demandes</strong> — un formulaire ou un mail arrive, l'agent identifie le besoin, complète ce qui manque, et vous le transmet déjà trié.</li>
+        <li><strong>Relancer</strong> — devis sans réponse, pièces manquantes, factures en retard&nbsp;: au bon moment, avec le bon ton, et l'arrêt automatique dès que le client répond.</li>
+        <li><strong>Préparer</strong> — un rendez-vous, un dossier, un point hebdomadaire&nbsp;: rassembler les éléments épars pour qu'un humain arrive avec tout sous la main.</li>
+      </ul>
+      <p class="reveal">À l'inverse, les usages qui échouent partagent aussi un profil&nbsp;: une tâche rare, aux règles floues, dont personne ne sait dire si le résultat est bon. Automatiser un travail que l'entreprise elle-même n'arrive pas à décrire ne produit jamais rien de solide.</p>
+
+      <h2 class="reveal">Trois limites à connaître avant de se lancer</h2>
+      <ul class="check-list reveal">
+        <li><strong>Un agent se trompe.</strong> La bonne question n'est donc pas ce qu'il sait faire, mais où on l'arrête. Un agent qui prépare et soumet à validation fait une erreur sans conséquence&nbsp;; un agent qui envoie, paie ou signe transforme la même erreur en incident client.</li>
+        <li><strong>Un agent vieillit.</strong> Il dépend d'outils tiers qui changent d'interface, de mots de passe qui expirent, de règles métier qui évoluent. Sans surveillance, il cesse de fonctionner — souvent silencieusement, ce qui est pire.</li>
+        <li><strong>Un agent voit vos données.</strong> Où elles sont hébergées, qui peut les lire, si elles servent à entraîner un modèle&nbsp;: ces questions se tranchent au début du projet. Elles se paramètrent&nbsp;; elles ne se rattrapent pas.</li>
+      </ul>
+
+      <h2 class="reveal">Et l'obligation de formation&nbsp;?</h2>
+      <p class="reveal">Depuis le 2 février 2025, l'article 4 du règlement européen sur l'intelligence artificielle impose aux employeurs de garantir un niveau suffisant de maîtrise de l'IA aux personnes qui utilisent ces systèmes pour le compte de l'entreprise. Autrement dit&nbsp;: déployer un agent sans expliquer à ceux qui s'en servent ce qu'il fait, ce qu'il ne fait pas et ce qu'on n'a pas le droit de lui confier n'est pas seulement risqué, c'est en dehors du cadre. Le sujet est traité sur notre page <a href="/intelligence-artificielle/formation-ia">formation IA</a>.</p>
+
+      <h2 class="reveal">Questions fréquentes</h2>
+      <div class="faq reveal">
+        <details>
+          <summary>Qu'est-ce qu'un agent IA&nbsp;?</summary>
+          <div class="faq__body"><p>Un programme qui poursuit un objectif défini en enchaînant lui-même plusieurs étapes&nbsp;: il consulte des informations, appelle des outils, décide de l'action suivante selon le résultat obtenu, et recommence jusqu'à atteindre l'objectif ou buter sur un cas qu'il ne sait pas traiter. On lui donne un but et des moyens, pas une liste d'instructions figées.</p></div>
+        </details>
+        <details>
+          <summary>Quelle différence avec un chatbot ou un assistant virtuel&nbsp;?</summary>
+          <div class="faq__body"><p>Un chatbot répond à des questions&nbsp;: il produit du texte. Un assistant virtuel exécute des commandes, une par une. Un agent agit de sa propre initiative dans un cadre fixé — il peut lire une pièce jointe, la classer, mettre à jour une fiche et déclencher une relance sans qu'on lui demande chaque étape. La question à poser à un prestataire&nbsp;: est-ce que ça répond, ou est-ce que ça agit dans mes outils&nbsp;?</p></div>
+        </details>
+        <details>
+          <summary>Un agent IA peut-il se tromper&nbsp;?</summary>
+          <div class="faq__body"><p>Oui. C'est pourquoi la décision de conception la plus importante n'est pas ce que l'agent sait faire, mais où on l'arrête. Un agent qui prépare une réponse et la soumet à validation fait une erreur sans conséquence&nbsp;; un agent qui envoie, paie ou signe transforme la même erreur en incident. Notre règle&nbsp;: rien d'irréversible sans qu'un humain l'ait vu.</p></div>
+        </details>
+        <details>
+          <summary>Faut-il être une grande entreprise&nbsp;?</summary>
+          <div class="faq__body"><p>Non, et l'intérêt est souvent inverse. Dans une grande structure, la tâche répétitive est confiée à une équipe dédiée. Dans une TPE, elle est portée par le dirigeant ou par une seule personne, en plus du reste. Ce qui compte n'est pas la taille, c'est que la tâche soit répétitive, fréquente et décrite par des règles stables.</p></div>
+        </details>
+        <details>
+          <summary>Combien coûte un agent IA pour une PME&nbsp;?</summary>
+          <div class="faq__body"><p>Il n'existe pas de prix de catalogue honnête&nbsp;: le coût dépend du nombre d'outils à connecter et du volume traité. Ce qui peut se dire, c'est que le calcul se fait à l'envers — on mesure d'abord le temps réellement consommé par la tâche, on en déduit son coût annuel, et on compare. Si l'automatisation ne se rembourse pas en quelques mois, elle ne mérite pas d'être faite, et c'est une conclusion que nous rendons aussi.</p></div>
+        </details>
+      </div>
+
+      <h2 class="reveal">Aller plus loin</h2>
+      <ul class="reveal">
+        <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA &amp; automatisations sur mesure</a> — ce que nous déployons concrètement, et notre méthode</li>
+        <li><a href="/automatisation/">Agence d'automatisation</a> — installation, transfert aux équipes, suivi</li>
+        <li><a href="/intelligence-artificielle/agent-ia-cabinet-comptable">Le cas des cabinets d'expertise comptable</a></li>
+      </ul>
+    </div>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-card">
+      <canvas class="fluid-canvas" aria-hidden="true"></canvas>
+      <div class="footer__grid">
+        <div class="footer__logo">
+          <img src="../assets/logo-fiducia-ia.webp" alt="Fiducia IA" width="165" height="55" loading="lazy">
+          <p style="font-size:0.92rem;max-width:34ch">Le partenaire IA des dirigeants et cadres — visibilité, formation, automatisation.</p>
+          <div class="footer__contacts">
+            <a href="tel:+33615513604" aria-label="Appeler Fiducia IA">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+            <a href="mailto:contact@fiducia-ia.com" aria-label="Écrire à Fiducia IA">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+            <a href="https://calendly.com/fiducia-ia/30min" aria-label="Prendre rendez-vous avec Fiducia IA">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Expertises</h4>
+          <ul>
+            <li><a href="/automatisation/">Agence d'automatisation</a></li>
+            <li><a href="/automatisation/facturation-electronique-tpe-pme">Facturation électronique</a></li>
+            <li><a href="/referencement-seo-geo/referencement-google-seo">Référencement Google (SEO)</a></li>
+            <li><a href="/referencement-seo-geo/strategie-contenu-longue-traine">Longue traîne &amp; contenu</a></li>
+            <li><a href="/referencement-seo-geo/referencement-geo-ia">GEO — visibilité IA</a></li>
+            <li><a href="/referencement-seo-geo/google-business-profile-gmb">Google Business Profile</a></li>
+            <li><a href="/creation-et-refonte-site/creation-site-internet">Création de site internet</a></li>
+            <li><a href="/creation-et-refonte-site/refonte-site-internet">Refonte de site internet</a></li>
+            <li><a href="/creation-et-refonte-site/creation-application-pme">Création d'applications PME</a></li>
+            <li><a href="/intelligence-artificielle/formation-ia">Formation IA</a></li>
+            <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA &amp; automatisations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+33615513604">06 15 51 36 04</a></li>
+            <li><a href="mailto:contact@fiducia-ia.com">contact@fiducia-ia.com</a></li>
+            <li>Montagnac (34530) — Hérault</li>
+            <li><a href="/agence-ia-montpellier">Agence IA Montpellier</a></li>
+            <li><a href="/agence-ia-beziers">Agence IA Béziers</a></li>
+            <li><a href="/agence-ia-sete">Agence IA Sète</a></li>
+            <li><a href="/actualites/">Actualités</a></li>
+            <li><a href="/a-propos">À propos</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© 2026 FIDUCIA CONSEILS — Fiducia IA</span>
+      <a href="/mentions-legales">Mentions légales</a>
+      <a href="/privacy-policy">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js?v=20260804" defer></script>
+<nav class="action-bar" aria-label="Actions rapides">
+  <a class="action-bar__call" href="tel:+33615513604">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Appeler
+  </a>
+  <a class="action-bar__cta" href="https://calendly.com/fiducia-ia/30min">Audit offert</a>
+</nav>
+
+</body>
+</html>

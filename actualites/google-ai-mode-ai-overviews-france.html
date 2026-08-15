@@ -20,7 +20,7 @@
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="preload" href="https://fonts.gstatic.com/s/spacegrotesk/v22/V8mDoQDjQSkFtoMM3T6r8E7mPb94C_k3HqUtEw.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../style.css?v=20260804">
+  <link rel="stylesheet" href="../style.css?v=20260815">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -83,6 +83,21 @@
   </button>
   <ul class="nav__links">
     <li><a href="/">Accueil</a></li>
+    <li class="nav__item nav__item--dropdown">
+      <span class="nav__link-group">
+        <a class="nav__toplink" href="/automatisation/">Automatisation</a>
+        <button type="button" class="nav__dropdown-toggle" aria-expanded="false" aria-controls="dd-automatisation" aria-label="Sous-menu Automatisation">
+          <svg class="nav__chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </span>
+      <ul class="nav__dropdown" id="dd-automatisation">
+      <li><a href="/automatisation/">Vue d'ensemble</a></li>
+      <li><a href="/automatisation/facturation-electronique-tpe-pme">Facturation électronique</a></li>
+      <li><a href="/automatisation/accompagnement-n8n">Accompagnement n8n</a></li>
+      <li><a href="/intelligence-artificielle/agents-ia-entreprise">Agents IA &amp; workflows</a></li>
+      <li><a href="/intelligence-artificielle/agent-ia-cabinet-comptable">Cabinets comptables</a></li>
+      </ul>
+    </li>
     <li class="nav__item nav__item--dropdown">
       <span class="nav__link-group">
         <a class="nav__toplink" href="/referencement-seo-geo/">SEO &amp; GEO</a>
@@ -247,6 +262,8 @@
         <div>
           <h4>Expertises</h4>
           <ul>
+            <li><a href="/automatisation/">Agence d'automatisation</a></li>
+            <li><a href="/automatisation/facturation-electronique-tpe-pme">Facturation électronique</a></li>
             <li><a href="/referencement-seo-geo/referencement-google-seo">Référencement Google (SEO)</a></li>
             <li><a href="/referencement-seo-geo/strategie-contenu-longue-traine">Longue traîne &amp; contenu</a></li>
             <li><a href="/referencement-seo-geo/referencement-geo-ia">GEO — visibilité IA</a></li>
