@@ -26,6 +26,9 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
+# --- Redirection 301 : facturation electronique deplacee en actualites (15 aout 2026) ---
+RewriteRule ^automatisation/facturation-electronique-tpe-pme/?$ /actualites/facturation-electronique-tpe-pme [R=301,L]
+
 # --- Redirections 301 : restructuration en silos (8 juil. 2026) ---
 RewriteRule ^creation-site-internet/?$ /creation-et-refonte-site/creation-site-internet [R=301,L]
 RewriteRule ^refonte-site-internet/?$ /creation-et-refonte-site/refonte-site-internet [R=301,L]
