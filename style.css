@@ -667,12 +667,11 @@ img { max-width: 100%; height: auto; }
   text-align: left; padding: 32px 28px 26px;
   display: flex; flex-direction: column;
 }
-/* chiffre plein plutôt qu'en dégradé : l'emphase vient de la taille, pas de la décoration */
+/* Le dégradé est hérité de .proof strong : c'est la charte, on n'y touche pas.
+   L'emphase supplémentaire vient de la taille et du tracking, pas d'un changement de couleur. */
 .proof-band--3 .proof strong {
   font-size: clamp(3.4rem, 5.4vw, 4.6rem); line-height: 0.95;
   letter-spacing: -0.03em; margin-top: 4px;
-  background: none; -webkit-background-clip: border-box; background-clip: border-box;
-  color: var(--cyan);
 }
 .proof-band--3 .proof span { font-size: 0.95rem; margin-top: 18px; flex: 1; }
 .proof__ico {
@@ -689,7 +688,6 @@ img { max-width: 100%; height: auto; }
   border-top: 1px solid var(--border);
   font-size: 0.78rem; color: var(--text-muted); opacity: 0.85;
 }
-.steps--4 { grid-template-columns: repeat(4, 1fr); }
 .factor__tag {
   display: inline-block; font-family: var(--font-head);
   font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
@@ -699,9 +697,6 @@ img { max-width: 100%; height: auto; }
 .factor__tag--off { color: var(--text-muted); border: 1px solid rgba(168, 182, 204, 0.35); }
 .factor--off { opacity: 0.72; }
 
-@media (max-width: 1000px) {
-  .steps--4 { grid-template-columns: 1fr 1fr; }
-}
 @media (max-width: 900px) {
   .proof-band { grid-template-columns: 1fr 1fr; }
   .proof-band--3 { grid-template-columns: 1fr; }
