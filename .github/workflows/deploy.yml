@@ -1,9 +1,12 @@
 name: Déploiement Hostinger
 
-# Solution de secours manuelle : le déploiement principal passe par
-# l'intégration Git native de Hostinger (hPanel → Avancé → GIT, webhook
-# automatique sur push main), comme pour gold-strategies-site.
-# Ce workflow ne sert que si le déploiement Git Hostinger est indisponible.
+# ATTENTION (vérifié le 24/08/2026) : l'intégration Git native de hPanel pour
+# fiducia-ia.com est branchée sur le dépôt mg-traiteur-ops (app cliente mg-ops),
+# pas sur ce dépôt. Ne jamais compter dessus pour ce site, ni la reconfigurer.
+# Ce workflow FTP est donc la voie de déploiement automatisée normale pour ce
+# site (pas un simple filet de sécurité), avec en complément la voie manuelle
+# via l'API Hostinger (hosting_generateUploadURLV1) documentée dans le skill
+# fiducia-ia-blog-hebdo.
 # Il se lance depuis l'onglet Actions ("Run workflow") ou via l'API, et
 # nécessite 3 secrets dans Settings → Secrets and variables → Actions :
 #   FTP_SERVER    : hôte FTP Hostinger (ex. ftp.fiducia-ia.com)
@@ -31,7 +34,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           server-dir: ./
           exclude: |
             **/.git*
