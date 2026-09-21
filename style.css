@@ -646,6 +646,82 @@ img { max-width: 100%; height: auto; }
   .compare__fill { transition: none; transform: scaleX(var(--s, 0)); }
 }
 
+/* ---------- Schéma animé : cercle de compétitivité / capacité ---------- */
+.loop-diagram { margin: 32px auto 10px; max-width: 480px; }
+.loop-diagram svg { width: 100%; height: auto; display: block; }
+.loop-diagram__arc {
+  fill: none; stroke: var(--cyan); stroke-width: 3; stroke-linecap: round;
+  filter: drop-shadow(0 0 5px rgba(55, 200, 255, 0.35));
+  stroke-dasharray: 236; stroke-dashoffset: 236;
+  transition: stroke-dashoffset 1s ease-out;
+}
+.loop-diagram.is-visible .loop-diagram__arc:nth-of-type(1) { stroke-dashoffset: 0; transition-delay: 0.1s; }
+.loop-diagram.is-visible .loop-diagram__arc:nth-of-type(2) { stroke-dashoffset: 0; transition-delay: 0.5s; }
+.loop-diagram.is-visible .loop-diagram__arc:nth-of-type(3) { stroke-dashoffset: 0; transition-delay: 0.9s; }
+.loop-diagram.is-visible .loop-diagram__arc:nth-of-type(4) { stroke-dashoffset: 0; transition-delay: 1.3s; }
+.loop-diagram__node {
+  opacity: 0; transform-box: fill-box; transform-origin: center;
+  transform: scale(0.6);
+  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.loop-diagram.is-visible .loop-diagram__node:nth-of-type(1) { opacity: 1; transform: scale(1); transition-delay: 0.05s; }
+.loop-diagram.is-visible .loop-diagram__node:nth-of-type(2) { opacity: 1; transform: scale(1); transition-delay: 0.45s; }
+.loop-diagram.is-visible .loop-diagram__node:nth-of-type(3) { opacity: 1; transform: scale(1); transition-delay: 0.85s; }
+.loop-diagram.is-visible .loop-diagram__node:nth-of-type(4) { opacity: 1; transform: scale(1); transition-delay: 1.25s; }
+.loop-diagram__circle { fill: var(--bg-card); stroke: var(--border-strong); stroke-width: 1.5; }
+.loop-diagram__num { font-family: var(--font-head); font-weight: 700; font-size: 22px; fill: var(--cyan); }
+.loop-diagram__label { font-family: var(--font-head); font-size: 12px; font-weight: 600; fill: var(--text); }
+.loop-diagram__legend { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 10px; }
+.loop-diagram__legend li { font-size: 0.92rem; color: var(--text-muted); }
+.loop-diagram__legend strong { color: var(--text); font-family: var(--font-head); }
+.loop-diagram__caption { font-size: 0.8rem; color: var(--text-muted); opacity: 0.75; margin: 14px 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  .loop-diagram__arc { transition: none; stroke-dashoffset: 0; }
+  .loop-diagram__node { transition: none; opacity: 1; transform: none; }
+}
+
+/* ---------- Schéma animé : outil isolé -> IA intégrée à l'écosystème ---------- */
+.ecosystem-diagram {
+  display: grid; grid-template-columns: 1fr 46px 1fr; gap: 6px; align-items: center;
+  margin: 32px 0 10px;
+}
+.ecosystem-diagram__panel {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-card); padding: 22px 16px 18px; text-align: center;
+}
+.ecosystem-diagram__panel svg { width: 100%; max-width: 220px; height: auto; margin: 0 auto; display: block; }
+.ecosystem-diagram__panel p { font-size: 0.85rem; margin: 12px 0 0; }
+.ecosystem-diagram__tag {
+  display: inline-block; font-family: var(--font-head); font-size: 0.66rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 999px; margin-bottom: 14px;
+}
+.ecosystem-diagram__tag--off { color: var(--text-muted); border: 1px solid rgba(168, 182, 204, 0.35); }
+.ecosystem-diagram__tag--on { color: #05070d; background: var(--gradient); }
+.ecosystem-diagram__arrow { display: flex; justify-content: center; opacity: 0.55; }
+.ecosystem-diagram__arrow svg { width: 28px; height: 28px; }
+.ecosystem-diagram__node--off { fill: rgba(168, 182, 204, 0.12); stroke: rgba(168, 182, 204, 0.4); stroke-width: 1.3; stroke-dasharray: 3 4; }
+.ecosystem-diagram__hub { fill: var(--bg-card); stroke: var(--border-strong); stroke-width: 1.5; }
+.ecosystem-diagram__node { fill: var(--bg-card); stroke: var(--border-strong); stroke-width: 1.5; }
+.ecosystem-diagram__link {
+  stroke: var(--cyan); stroke-width: 2; stroke-linecap: round;
+  stroke-dasharray: 90; stroke-dashoffset: 90;
+  transition: stroke-dashoffset 0.8s ease-out;
+}
+.ecosystem-diagram.is-visible .ecosystem-diagram__link:nth-of-type(1) { stroke-dashoffset: 0; transition-delay: 0.1s; }
+.ecosystem-diagram.is-visible .ecosystem-diagram__link:nth-of-type(2) { stroke-dashoffset: 0; transition-delay: 0.28s; }
+.ecosystem-diagram.is-visible .ecosystem-diagram__link:nth-of-type(3) { stroke-dashoffset: 0; transition-delay: 0.46s; }
+.ecosystem-diagram.is-visible .ecosystem-diagram__link:nth-of-type(4) { stroke-dashoffset: 0; transition-delay: 0.64s; }
+.ecosystem-diagram.is-visible .ecosystem-diagram__link:nth-of-type(5) { stroke-dashoffset: 0; transition-delay: 0.82s; }
+.ecosystem-diagram__label { font-family: var(--font-head); font-size: 10.5px; fill: var(--text-muted); }
+.ecosystem-diagram__num { font-family: var(--font-head); font-weight: 700; font-size: 15px; fill: var(--cyan); }
+@media (prefers-reduced-motion: reduce) {
+  .ecosystem-diagram__link { transition: none; stroke-dashoffset: 0; }
+}
+@media (max-width: 680px) {
+  .ecosystem-diagram { grid-template-columns: 1fr; }
+  .ecosystem-diagram__arrow svg { transform: rotate(90deg); }
+}
+
 /* ---------- Liste de causes (sans numérotation décorative) ---------- */
 .causes {
   display: grid; grid-template-columns: repeat(2, 1fr);
