@@ -223,6 +223,52 @@
 
 <main>
 
+  <section class="section motion" id="presentation" aria-label="Fiducia IA en 60 secondes">
+    <div class="container">
+      <figure class="motion__frame reveal">
+        <video id="motion-video" muted loop playsinline preload="none" width="1920" height="1080"
+               poster="assets/fiducia-ia-presentation-60s.jpg"
+               aria-label="Présentation animée de Fiducia IA : sites internet, référencement SEO et GEO, formation IA, agents IA, audit offert de 30 minutes">
+          <source src="assets/fiducia-ia-presentation-60s.mp4" type="video/mp4">
+        </video>
+        <button type="button" id="motion-sound" class="motion__sound" aria-pressed="false">Activer le son</button>
+        <figcaption class="motion__cap">Fiducia IA en 60 secondes</figcaption>
+      </figure>
+    </div>
+    <style>
+      .motion { padding: 8px 0 72px; }
+      .motion__frame { position: relative; max-width: 960px; margin: 0 auto; border-radius: var(--radius);
+        overflow: hidden; border: 1px solid var(--border); background: #060709; }
+      .motion__frame video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+      .motion__sound { position: absolute; right: 14px; bottom: 14px; padding: 8px 14px; border-radius: 10px;
+        border: 1px solid var(--border-strong); background: rgba(5, 7, 13, .72); color: var(--text);
+        font: 500 0.85rem var(--font-body); cursor: pointer; }
+      .motion__sound:hover, .motion__sound:focus-visible { border-color: var(--cyan); }
+      .motion__cap { position: absolute; left: 16px; bottom: 16px; color: var(--text-muted);
+        font: 600 0.75rem var(--font-head); letter-spacing: 0.14em; text-transform: uppercase; pointer-events: none; }
+      @media (max-width: 600px) { .motion { padding: 0 0 48px; } .motion__cap { display: none; }
+        .motion__sound { right: 8px; bottom: 8px; padding: 4px 9px; font-size: 0.7rem; } }
+    </style>
+    <script>
+      (function () {
+        var v = document.getElementById("motion-video"), b = document.getElementById("motion-sound");
+        if (!v || !b) return;
+        var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        b.addEventListener("click", function () {
+          v.muted = !v.muted;
+          if (!v.muted) { v.currentTime = 0; v.play(); }
+          b.textContent = v.muted ? "Activer le son" : "Couper le son";
+          b.setAttribute("aria-pressed", String(!v.muted));
+        });
+        if (calm) { v.controls = true; return; }
+        if (!("IntersectionObserver" in window)) { v.play().catch(function () {}); return; }
+        new IntersectionObserver(function (e) {
+          if (e[0].isIntersecting) { v.play().catch(function () {}); } else { v.pause(); }
+        }, { threshold: 0.3 }).observe(v);
+      })();
+    </script>
+  </section>
+
   <section class="section" id="urgence">
     <div class="container">
       <div class="section__head reveal">
