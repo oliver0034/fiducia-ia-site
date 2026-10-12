@@ -1062,3 +1062,13 @@
   /* (L'ancien réseau neuronal des pages intérieures est remplacé par le
      fluide — voir le dispatcher heroFxCanvas en tête de fichier.) */
 })();
+
+/* Bulle WhatsApp, bandeau de consentement et mesure d'audience (12/10/2026) :
+   le code vit dans contact-mesure.js ; il est chargé d'ici pour couvrir toutes les pages
+   sans modifier leur HTML. */
+(function () {
+  if (document.querySelector("script[data-contact-mesure]")) return;
+  var s = document.createElement("script");
+  s.src = "/contact-mesure.js?v=20261012"; s.defer = true; s.setAttribute("data-contact-mesure", "");
+  document.head.appendChild(s);
+})();
